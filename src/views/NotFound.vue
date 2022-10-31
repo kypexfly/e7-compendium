@@ -12,7 +12,10 @@
 </template>
 <script>
 export default {
-
+    name: 'NotFound',
+    created() {
+        document.title = "NotFound | E7Compendium "
+    }
 }
 </script>
 <style>

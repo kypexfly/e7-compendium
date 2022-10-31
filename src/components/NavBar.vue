@@ -1,5 +1,5 @@
 <template>
-	<nav class="bg-white border-gray-200 fix-padding dark:bg-gray-900/30 sticky top-0 z-10 w-full backdrop-blur">
+	<nav class="bg-white border-gray-200 fix-padding dark:bg-gray-900/30 sticky top-0 z-10 w-full backdrop-blur border-b border-y-slate-600">
 		<div class="container flex flex-wrap justify-between items-center mx-auto">
 			<router-link to="/" class="flex items-center">
 				<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">E7 Compendium</span>

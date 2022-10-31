@@ -20,7 +20,10 @@
 </template>
 <script>
 export default {
-
+    name: 'DevNotes',
+    created() {
+        document.title = "DevNotes | E7Compendium "
+    }
 }
 </script>
 <style>

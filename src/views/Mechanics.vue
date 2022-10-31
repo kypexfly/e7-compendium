@@ -30,5 +30,11 @@
     </main>
 </template>
 
-<script setup>
+<script>
+export default {
+    name: 'Mechanics',
+    created() {
+        document.title = "Mechanics | E7Compendium "
+    }
+}
 </script>

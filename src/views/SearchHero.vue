@@ -5,3 +5,12 @@
         </div>
     </main>
 </template>
+
+<script>
+export default {
+    name: 'SearchHero',
+    created() {
+        document.title = "Heroes | E7Compendium "
+    }
+}
+</script>

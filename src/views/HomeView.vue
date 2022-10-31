@@ -6,7 +6,7 @@
     <div class="bg">
       <div class="container flex flex-col gap-10 justify-center content-between items-center mx-auto h-full text-center fix-padding relative">
         <div class="drop-shadow">
-          <h1>
+          <h1 class="text-5xl">
             EPIC SEVEN COMPENDIUM
           </h1>
           <p>
@@ -59,7 +59,16 @@
   </div>
 </template>
 
-<style>
+<script>
+export default {
+    name: 'HomeView',
+    created() {
+        document.title = "E7 Compendium "
+    }
+}
+</script>
+
+<style scoped>
 main {
   min-height: auto !important;
 }
