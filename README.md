@@ -1,5 +1,11 @@
 # e7-compendium
 
+## Developer notes
+
+This project is developed with Vue 3 + TailWindCSS.
+
+# Default README.MD
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
