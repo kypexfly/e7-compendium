@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('../views/SearchHero.vue')
     },
     {
+      path: '/dev-notes',
+      name: 'DevNotes',
+      component: () => import('../views/DevNotes.vue')
+    },
+    {
       path: '/:catchAll(.*)',
       name: 'NotFound',
       component: () => import('../views/NotFound.vue')

@@ -94,6 +94,12 @@
 										Calculator
 									</router-link>
 								</li>
+								<li>
+									<router-link to="/dev-notes"
+										class="block py-2 px-4 text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+										Dev notes
+									</router-link>
+								</li>
 							</ul>
 						</div>
 					</li>
