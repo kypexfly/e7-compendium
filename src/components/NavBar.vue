@@ -21,7 +21,9 @@
 					<li>
 						<router-link to="/"
 							class="block py-2 pr-4 pl-3 font-bold text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-2 md:px-3 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-							aria-current="page">Home</router-link>
+							aria-current="page">
+							Home
+						</router-link>
 					</li>
 
 					<li>
@@ -47,7 +49,7 @@
 							</svg></button>
 						<!-- Dropdown menu -->
 						<div id="dropdownNavbar"
-							class="block absolute z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+							class="hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
 							<ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
 								aria-labelledby="dropdownLargeButton">
 								<li>
@@ -85,7 +87,7 @@
 							</svg></button>
 						<!-- Dropdown menu -->
 						<div id="dropdownNavbar"
-							class="block absolute z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+							class="hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
 							<ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
 								aria-labelledby="dropdownLargeButton">
 								<li>
@@ -109,11 +111,13 @@
 	</nav>
 
 </template>
+
 <script>
 export default {
 	name: "NavBar"
 }
 </script>
+
 <style>
 .router-link-active {
 	@apply text-blue-200 !important;
