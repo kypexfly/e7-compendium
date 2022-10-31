@@ -19,11 +19,20 @@ const router = createRouter({
       name: 'search-hero',
       component: () => import('../views/SearchHero.vue')
     },
+    // Resources
+
+    // Tools
     {
-      path: '/dev-notes',
+      path: '/tools/dev-notes',
       name: 'DevNotes',
-      component: () => import('../views/DevNotes.vue')
+      component: () => import('../views/Tools/DevNotes.vue')
     },
+    {
+      path: '/tools/calculator',
+      name: 'Calculator',
+      component: () => import('../views/Tools/Calculator.vue')
+    },
+    // All routes that doesn't match goes to 404
     {
       path: '/:catchAll(.*)',
       name: 'NotFound',

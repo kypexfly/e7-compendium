@@ -1,5 +1,6 @@
 <template>
-	<nav class="bg-white border-gray-200 fix-padding dark:bg-gray-900/30 sticky top-0 z-10 w-full backdrop-blur border-b border-y-slate-600">
+	<nav
+		class="bg-white border-gray-200 fix-padding dark:bg-gray-900/30 sticky top-0 z-10 w-full backdrop-blur border-b border-y-slate-600">
 		<div class="container flex flex-wrap justify-between items-center mx-auto">
 			<router-link to="/" class="flex items-center">
 				<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">E7 Compendium</span>
@@ -92,13 +93,13 @@
 							<ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
 								aria-labelledby="dropdownLargeButton">
 								<li>
-									<router-link to="/calculator"
+									<router-link to="/tools/calculator"
 										class="block py-2 px-4 text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
 										Calculator
 									</router-link>
 								</li>
 								<li>
-									<router-link to="/dev-notes"
+									<router-link to="/tools/dev-notes"
 										class="block py-2 px-4 text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
 										Dev notes
 									</router-link>
