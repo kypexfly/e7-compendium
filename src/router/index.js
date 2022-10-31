@@ -18,6 +18,11 @@ const router = createRouter({
       path: '/search/hero',
       name: 'search-hero',
       component: () => import('../views/SearchHero.vue')
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'NotFound',
+      component: () => import('../views/NotFound.vue')
     }
   ]
 })

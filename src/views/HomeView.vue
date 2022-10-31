@@ -23,11 +23,11 @@
             on Epic Seven.
           </p>
           <strong>Current Features</strong>
-          <ul class="list-disc my-3">
-            <li>Hero Information</li>
-            <li>Artifact Information</li>
-            <li>Mechanics Details</li>
-            <li>Guides</li>
+          <ul class="my-3">
+            <li>📄 Hero Information</li>
+            <li>💠 Artifact Information</li>
+            <li>📐 Mechanics Details</li>
+            <li>⚔ Guides</li>
           </ul>
           <strong>Planned Additions</strong>
           <ul class="list-disc my-3">
@@ -36,13 +36,6 @@
             <li>Language Support</li>
           </ul>
           <p><i>Changelog: added basic functions</i></p>
-          <small>
-            <p>
-              Maintained by <a href="https://twitter.com/ichinosekuri">@ichinoseKuri</a> (
-              <i>Discord ID: 『Kuri』#0002</i>
-              )
-            </p>
-          </small>
         </div>
       </div>
     </main>
@@ -54,11 +47,14 @@
   background: #252B35 no-repeat scroll center center;
   height: 460px;
   position: relative;
+  -webkit-box-shadow: inset 0 0 30px #000;
+  -moz-box-shadow: inset 0 0 30px #000;
+  box-shadow: inset 0 0 30px #000;
 }
 
 .bg::before {    
   content: "";
-  background: transparent no-repeat scroll center center;
+  background: #000 no-repeat scroll center center;
   background-image: url('../assets/background.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
