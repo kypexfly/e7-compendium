@@ -43,9 +43,16 @@
 </template>
 
 <style>
+main {
+  min-height: auto !important;
+}
+.home {
+  margin-top: -75px;
+}
 .bg {
   background: #252B35 no-repeat scroll center center;
-  height: 460px;
+  height: 500px;
+  min-height: 50vh;
   position: relative;
   -webkit-box-shadow: inset 0 0 30px #000;
   -moz-box-shadow: inset 0 0 30px #000;
@@ -60,7 +67,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.25;
+  opacity: 0.3;
   position: absolute;
   top: 0px;
   right: 0px;

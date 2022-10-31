@@ -10,6 +10,10 @@ body, #app {
     @apply bg-slate-800 text-slate-200
 }
 
+main {
+    min-height: 80vh;
+}
+
 h1 {
     @apply text-3xl font-thin
 }
