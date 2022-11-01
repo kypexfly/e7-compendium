@@ -28,7 +28,7 @@
             </svg>
           </div>
           <input type="search" id="default-search"
-            class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white focus:b-none"
+            class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg dark:bg-gray-700/75 dark:placeholder-gray-400 dark:text-white focus:b-none"
             placeholder="Search heroes or artifacts..." required>
           <button type="submit"
             class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700">Search</button>
