@@ -3,15 +3,6 @@
         <div class="flex flex-col gap-5 items-center">
             <SearchBar v-model="searchTerm" />
             {{ searchTerm }}
-            <!-- {{ hero.ID}}
-
-            <div v-if="heroes.length">
-                <span v-for="hero in heroes">
-                    {{ hero.ID }}
-                </span>
-            </div> -->
-
-
         </div>
     </main>
 </template>
