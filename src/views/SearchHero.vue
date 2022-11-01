@@ -28,7 +28,9 @@
 
                 <tbody>
                     <tr v-for="hero in filteredHeroes" :key="hero.id" @click="showMore(hero.id)"
-                        class="border-b dark:hover:bg-slate-900/50 dark:border-gray-700 cursor-pointer">
+                        class="border-b dark:hover:bg-slate-900/50 dark:border-gray-700 cursor-pointer"
+                        :class="{'bg-gray-700/50': (selectedHero === hero.id )}"
+                        >
                         <td class="px-1">
                             <small>
                                 <pre>{{ hero.id }}</pre>
