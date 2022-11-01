@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div
-            class="container border-t border-y-slate-600 flex justify-center items-center mx-auto fix-padding">
+            class="container border-t border-y-slate-700 flex justify-center items-center mx-auto fix-padding">
             <small>
                 <p>
                     Maintained by <a href="https://twitter.com/ichinosekuri">@ichinoseKuri</a> (

@@ -28,7 +28,7 @@
             </svg>
           </div>
           <input type="search" id="default-search"
-            class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white focus:b-none"
+            class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg dark:bg-gray-700/75 dark:placeholder-gray-400 dark:text-white focus:b-none"
             placeholder="Search heroes or artifacts..." required>
           <button type="submit"
             class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700">Search</button>
@@ -36,27 +36,86 @@
         </div>
       </div>
     </div>
-    <!-- <div class="justify-content-center">
-      <global-search class="search-bar"></global-search>
-    </div> -->
-    <main class="fix-padding">
-      <div class="container flex-wrap justify-center items-center mx-auto">
-        <div class="text-center fix-padding">
-          <strong>Current Features</strong>
+
+    <main class="container mx-auto fix-padding min-h-screen flex justify-center items-center flex-col">
+
+      <h1
+        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        What are you looking for?
+      </h1>
+      <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+        
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-5">
+
+        <div
+          class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border-2 border-gray-200 dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-700">
+          <div class="block">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Current Features</h5>
+          <p class="w-full font-normal text-gray-700 dark:text-gray-400">
+            <ul>
+              <li>📄 Hero Information</li>
+              <li>💠 Artifact Information</li>
+              <li>📐 Mechanics Details</li>
+              <li>⚔ Guides</li>
+            </ul>
+          </p>
+        </div>
+        </div>
+
+        <RouterLink to="/mechanics"
+          class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <div class="block">
+            <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Mechanics</h5>
+            <div class="w-full">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam nunc sit
+              amet nisi vehicula.
+            </div>
+          </div>
+        </RouterLink>
+        <RouterLink to="/search"
+          class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <div class="block">
+            <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Game Data</h5>
+            <div class="w-full">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam nunc sit
+              amet nisi vehicula.
+            </div>
+          </div>
+        </RouterLink>
+        <RouterLink to="/resources"
+          class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <div class="block">
+            <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Resources</h5>
+            <div class="w-full">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam nunc sit
+              amet nisi vehicula.
+            </div>
+          </div>
+        </RouterLink>
+
+
+        <!-- <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 ">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Planned Additions</h5>
+          <p class="font-normal text-gray-700 dark:text-gray-400">
           <ul class="my-3">
-            <li>📄 Hero Information</li>
-            <li>💠 Artifact Information</li>
-            <li>📐 Mechanics Details</li>
-            <li>⚔ Guides</li>
-          </ul>
-          <strong>Planned Additions</strong>
-          <ul class="list-disc my-3">
             <li>Morale Calculator</li>
             <li>Damage Calculator</li>
             <li>Language Support</li>
           </ul>
-          <p><i>Changelog: added basic functions</i></p>
+          </p>
         </div>
+
+        <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-900 dark:border-gray-700">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Changelog</h5>
+          <p class="font-normal text-gray-700 dark:text-gray-400">
+            <i>Added basic functions</i>
+          </p>
+        </div> -->
+
       </div>
     </main>
   </div>
@@ -72,13 +131,9 @@ export default {
 </script>
 
 <style scoped>
-main {
-  min-height: auto !important;
-}
-
 .bg {
-  background: #252B35 no-repeat scroll center center;
-  height: 500px;
+  background: transparent no-repeat scroll center center;
+  height: calc(100vh - 77px);
   min-height: 50vh;
   position: relative;
   -webkit-box-shadow: inset 0 0 30px #000;
@@ -88,8 +143,8 @@ main {
 
 .bg::before {
   content: "";
-  background: #000 no-repeat scroll center center;
-  background-image: url('../assets/background.png');
+  background: no-repeat scroll center center;
+  background-image: url('../assets/bg-summer.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

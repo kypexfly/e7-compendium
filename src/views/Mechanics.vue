@@ -1,40 +1,84 @@
 <template>
-    <main class="fix-padding">
-        <div class="container mx-auto">
-            <h1>Mechanics</h1>
+    <component :is="'style'" type="text/css">
+        footer {display: none}
+    </component>
+    <main class="flex justify-center overflow-hidden" ref="mainContainer" style="">
+        <section class="overflow-y-auto border-r border-slate-700 flex-1">
+            <article class="mx-auto max-w-[640px] :height overflow-y-auto" :class="{ '!ml-auto !mx-0': selectedHero }">
+                <ul>
+                    <li class="text-xl font-bold p-3 bg-slate-800 uppercase">Select a hero</li>
+                    <li v-for="heroNumber in _.range(1, 51)" :key="heroNumber" @click="showHeroPanel(heroNumber)"
+                        class="cursor-pointer p-3 hover:bg-slate-700"
+                        :class="{ 'bg-slate-700': selectedHero === heroNumber }">
+                        Hero {{ heroNumber }}
+                    </li>
+                </ul>
+            </article>
+        </section>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam nunc sit amet nisi vehicula, vel
-                vulputate lacus semper. Phasellus ut nulla at nunc feugiat blandit. Vestibulum tincidunt nibh id ante
-                aliquam, et vestibulum tortor viverra. Mauris pulvinar quam quis eros sagittis, ut posuere nibh tempor.
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer
-                eget leo gravida, suscipit nunc ut, rutrum erat. Pellentesque ornare turpis at varius pretium. Praesent
-                vel diam magna. Etiam a rhoncus lacus. Quisque id luctus dui. Donec euismod orci non feugiat porta.
-                Aenean tempor pharetra elit vel vulputate. Curabitur malesuada quis elit eu facilisis. Duis ultrices
-                nisi nec tincidunt finibus. Donec quis eleifend nulla, eget interdum massa.
-            </p>
+        <section class="overflow-y-auto flex-1" :class="{ 'max-w-[640px]': selectedHero && selectedExtra }"
+            v-if="selectedHero">
+            <article class="max-w-[640px] :height overflow-y-auto"
+                :class="{ 'mr-auto': selectedHero, 'ml-auto': selectedExtra }">
+                <ul class="text-center">
+                    <li class="text-xl font-bold p-3 bg-slate-800 uppercase">SELECTED: Hero {{ selectedHero }}</li>
+                    <li v-for="extraNumber in _.range(1, 51)" :key="extraNumber" @click="showExtraPanel(extraNumber)"
+                        class="cursor-pointer p-3 hover:bg-slate-700">
+                        Extra {{ extraNumber }}
+                    </li>
+                </ul>
+            </article>
+        </section>
 
-            <p>
-                Curabitur ut ligula fermentum, tristique metus id, consequat nisl. Ut congue sapien vel mi consectetur,
-                sed rhoncus felis consectetur. Integer tortor nibh, finibus ac hendrerit ac, euismod at ante. Fusce
-                pulvinar justo porttitor, molestie lacus a, accumsan risus. Duis imperdiet interdum lorem at rutrum.
-                Etiam blandit congue magna, quis rutrum tortor dictum sed. Aenean et nulla sodales, volutpat est in,
-                rutrum velit. Maecenas enim nisl, fermentum eu rhoncus non, sollicitudin vitae diam. Donec vel justo nec
-                ligula posuere pretium sed vel mi. Pellentesque laoreet fermentum posuere. Aenean vehicula lorem dui,
-                eget vestibulum enim porttitor a. Duis volutpat turpis non dui egestas vestibulum. Donec viverra mauris
-                at nibh sagittis, nec bibendum nisi mollis. Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Donec ultrices vitae lectus at tincidunt.
-            </p>
-
-        </div>
+        <section class="overflow-y-auto border-l border-slate-700 flex-1" v-if="selectedExtra">
+            <article class="mr-auto max-w-[640px] :height overflow-y-auto">
+                <ul>
+                    <li class="text-xl font-bold p-3 bg-slate-800 uppercase">Extra {{ selectedExtra }}</li>
+                    <li class="p-3" v-for="repeat in _.range(1, 21)" :key="repeat">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deserunt, similique repellat
+                        voluptatum dolore fugit esse dolores totam aut repudiandae porro voluptas sint veniam
+                        distinctio, pariatur officiis quo libero est! {{ repeat * selectedExtra }}
+                    </li>
+                </ul>
+            </article>
+        </section>
     </main>
 </template>
 
-<script>
-export default {
-    name: 'Mechanics',
-    created() {
-        document.title = "Mechanics | E7Compendium "
+<script setup>
+import { ref, onMounted } from 'vue'
+import _ from 'lodash'
+document.title = "Testing | E7Compendium "
+
+const selectedHero = ref('')
+const selectedExtra = ref('')
+const showHeroPanel = (heroName) => {
+    console.log(`shoHeroPanel(${heroName})`)
+    if (selectedHero.value === heroName) {
+        selectedHero.value = ''
+        return
     }
+    selectedExtra.value = ''
+    selectedHero.value = heroName
 }
+const showExtraPanel = (extraName) => {
+    console.log(`shoExtraPanel(${extraName})`)
+    if (selectedExtra.value === extraName) {
+        selectedExtra.value = ''
+        return
+    }
+    selectedExtra.value = extraName
+}
+
+const mainContainer = ref(null)
+
+onMounted(() => {
+    const navHeight = document.getElementById('navbar').clientHeight + 2
+    mainContainer.value.style.height = `calc(100vh - ${navHeight}px)`
+})
+
 </script>
+
+<style>
+
+</style>

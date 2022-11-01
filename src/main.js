@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
-import('flowbite/dist/flowbite')
-
 import './assets/global.css'
+import router from './router'
+
+// remove when flowbite-vue migration is completed
+import('flowbite')
 
 const app = createApp(App)
 
