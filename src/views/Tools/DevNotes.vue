@@ -15,6 +15,7 @@
                     ... +
                 </li>
             </ul>
+            <small>This section will deleted after finishing the project.</small>
         </div>
     </main>
 </template>
