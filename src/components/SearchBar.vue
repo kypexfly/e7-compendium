@@ -10,7 +10,7 @@
 
         <input type="search" id="default-search" v-model="searchInput"
             class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-md dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white focus:b-none"
-            placeholder="Search heroes or artifacts..." required>
+            placeholder="Search heroes..." required>
     </div>
 </template>
 

@@ -26,7 +26,7 @@
             <h2 class="text-2xl font-thin">About "Tools / Calculator" page</h2>
             <ul class="list-disc m-6">
                 <li>
-                    WIP. Might need better user interface, I didn't like.
+                    Might need better user interface, I don't like it.
                 </li>
                 <li>
                     FribbelsOptimizer's formula will be used.
