@@ -35,13 +35,13 @@
                             {{ hero.name }}
                         </th>
                         <td class="px-1">
-                            <img :src="`/src/assets/symbol/icon_${hero.element}.png`" width=20 alt="">
+                            <img :src="`/assets/symbol/icon_${hero.element}.png`" width=20 alt="">
                         </td>
                         <td class="px-1">
-                            <img :src="`/src/assets/symbol/icon_class_${hero.role}.png`" width=20 alt="">
+                            <img :src="`/assets/symbol/icon_class_${hero.role}.png`" width=20 alt="">
                         </td>
                         <td class="px-1">
-                            <img :src="`/src/assets/symbol/${hero.rarity}-star.png`" style="height:15px" alt="">
+                            <img :src="`/assets/symbol/${hero.rarity}-star.png`" style="height:15px" alt="">
                         </td>
                         <td class="px-1">
                             ????
