@@ -43,12 +43,14 @@
       <div class="container flex-wrap justify-center items-center mx-auto">
         <div class="text-center fix-padding">
           <strong>Current Features</strong>
+
           <ul class="my-3">
             <li>📄 Hero Information</li>
             <li>💠 Artifact Information</li>
             <li>📐 Mechanics Details</li>
             <li>⚔ Guides</li>
           </ul>
+          
           <strong>Planned Additions</strong>
           <ul class="list-disc my-3">
             <li>Morale Calculator</li>
@@ -77,7 +79,7 @@ main {
 }
 
 .bg {
-  background: #252B35 no-repeat scroll center center;
+  background: transparent no-repeat scroll center center;
   height: 500px;
   min-height: 50vh;
   position: relative;

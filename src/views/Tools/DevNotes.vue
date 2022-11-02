@@ -9,7 +9,7 @@
 
             <ul class="list-disc m-6">
                 <li>
-                    This project is using Vue 3 + Tailwind frameworks.
+                    This project is using Vue 3 + Tailwind framework.
                 </li>
             </ul>
 
@@ -23,20 +23,13 @@
                 </li>
             </ul>
 
-            <h2 class="text-2xl font-thin">About "Tools / Calculator" page</h2>
+            <h2 class="text-2xl font-thin">About "Tools > Calculator" page</h2>
             <ul class="list-disc m-6">
                 <li>
                     Might need better user interface, I don't like it.
                 </li>
                 <li>
                     FribbelsOptimizer's formula will be used.
-                </li>
-            </ul>
-
-            <h2 class="text-2xl font-thin">About Global search</h2>
-            <ul class="list-disc m-6">
-                <li>
-                    WIP. 
                 </li>
             </ul>
 

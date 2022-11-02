@@ -1,16 +1,13 @@
 <template>
     <main class="fix-padding">
         <div class="container mx-auto">
-            <!-- <h1>
-                Gear Score Calculator
-            </h1> -->
-
             <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
                 <div class="col-span-3">
                     <div class="text-center">
                         <h2 class="my-4 text-3xl">Select gear substats (WIP)</h2>
                         <button v-for="substat in substats" @click="toggleStats" type="button" :key="substat.name"
-                            :name="substat.name" class="btn-alternative" :class="{'btn-default': selectedStats.includes(substat.name)}">
+                            :name="substat.name" class="btn-alternative"
+                            :class="{ 'btn-default': selectedStats.includes(substat.name) }">
                             {{ substat.name }}
                         </button>
                     </div>
@@ -33,13 +30,22 @@
 
                 <div class="text-center">
                     <h2 class="my-4 text-3xl dark:text-white">Gear Score</h2>
-                    <span class="bg-green-100 text-green-800 text-5xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">60</span>
-                    <span class="bg-yellow-100 text-yellow-800 text-5xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">40</span>
-                    <span class="bg-red-100 text-red-800 text-5xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">30</span>
+                    <span
+                        class="bg-green-100 text-green-800 text-5xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
+                        60
+                    </span>
+                    <span
+                        class="bg-yellow-100 text-yellow-800 text-5xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
+                        40
+                    </span>
+                    <span
+                        class="bg-red-100 text-red-800 text-5xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
+                        30
+                    </span>
 
-                    
+
                 </div>
-                
+
             </div>
         </div>
     </main>
@@ -73,7 +79,7 @@ export default {
         }
 
         const score = computed(() => {
-            substats[selectedStats].multiplier
+            substats[selectedStats].multiplier 
         })
 
         return { substats, selectedStats, score, toggleStats }
