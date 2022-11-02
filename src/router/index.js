@@ -15,8 +15,8 @@ const router = createRouter({
       component: () => import('../views/Mechanics.vue')
     },
     {
-      path: '/search/hero',
-      name: 'search-hero',
+      path: '/search',
+      name: 'search',
       component: () => import('../views/SearchHero.vue')
     },
     // Resources

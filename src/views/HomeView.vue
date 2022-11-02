@@ -86,11 +86,12 @@ main {
   -webkit-box-shadow: inset 0 0 30px #000;
   -moz-box-shadow: inset 0 0 30px #000;
   box-shadow: inset 0 0 30px #000;
+  margin-top: -76px;
 }
 
 .bg::before {
   content: "";
-  background: #000 no-repeat scroll center center;
+  background: no-repeat scroll center center;
   background-image: url('../assets/background.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
