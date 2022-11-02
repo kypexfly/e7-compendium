@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-start gap-2 my-2">
+    <div class="flex justify-between gap-2 my-2">
         <span class="text-sm font-medium text-blue-700 dark:text-white">
             {{ label }}
         </span>
@@ -16,7 +16,7 @@ export default {
     name: "ProgressBar",
     props: {
         label: String,
-        labelValue: Number,
+        labelValue: [String, Number],
         progress: Number
     }
 }

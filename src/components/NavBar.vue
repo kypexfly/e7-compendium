@@ -122,6 +122,6 @@ export default {
 
 <style>
 .router-link-active {
-	@apply text-blue-300 !important;
+	@apply text-blue-600 !important;
 }
 </style>

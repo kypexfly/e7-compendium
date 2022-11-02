@@ -7,7 +7,15 @@
   }
   
 body, #app {
-    @apply bg-slate-800 text-slate-200
+    @apply text-slate-200;
+    /* bg-slate-800 */
+    background-color: #151f32;
+}
+
+#app {
+    background-image: url('./upper-gradient.svg');
+    background-repeat: no-repeat;
+    background-size: 55%;
 }
 
 main {

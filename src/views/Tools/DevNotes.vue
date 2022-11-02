@@ -19,7 +19,10 @@
                     WIP. Might take time to figure out filtering and  make it mobile compatible.
                 </li>
                 <li>
-                    Where is ATK, HP, DEF, SPD in hero-data.json?
+                    <strike>Where is ATK, HP, DEF, SPD in hero-data.json?</strike> 
+                </li>
+                <li>
+                    Might be better to put raw values of ATK, HP, DEF and SPD instead calculating because of browser performance.
                 </li>
             </ul>
 
@@ -30,6 +33,9 @@
                 </li>
                 <li>
                     FribbelsOptimizer's formula will be used.
+                </li>
+                <li>
+                    Forgot to ask, but what type of calculator is it?
                 </li>
             </ul>
 

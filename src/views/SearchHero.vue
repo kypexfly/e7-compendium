@@ -1,7 +1,10 @@
 <template>
-    <main class="flex justify-center lg:gap-20">
-        <section class="hidden md:block" :class="{'overflow-y-auto h-[82vh]': selectedHero}">
-            <div class="container mx-auto flex flex-col gap-5 my-5 items-center">
+    <main class="flex justify-center" @keyup.esc="removeSelectedHero" tabindex="0">
+        <section class="w-full overflow-y-auto"
+            :class="{ 'h-[82vh] hidden sm:block basis-2/3 lg:basis-auto border-r border-x-slate-700': selectedHero }">
+
+            <div class="w-full lg:w-[650px] sticky top-0 z-10 container my-4 mx-auto"
+                :class="{ 'ml-auto mr-0': selectedHero }">
                 <SearchBar v-model="searchTerm" />
                 <!-- <ul class="list-disc">
                     <li><small>Search term working (for now 😀): {{ searchTerm }}</small></li>
@@ -11,19 +14,33 @@
                 </ul> -->
             </div>
 
-            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto">
+            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4"
+                :class="{ 'ml-auto mr-0': selectedHero }">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mx-auto">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-blue-600 dark:text-gray-200">
                         <tr>
-                            <th scope="col" class="p-2.5">ID</th>
+                            <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                :class="{ '!hidden md:!table-cell': selectedHero }">ID</th>
                             <th scope="col" class="p-2.5">Name</th>
                             <th scope="col" class="p-2.5">Element</th>
                             <th scope="col" class="p-2.5">Class</th>
                             <th scope="col" class="p-2.5">Grade</th>
-                            <th scope="col" class="p-2.5">ATK</th>
-                            <th scope="col" class="p-2.5">HP</th>
-                            <th scope="col" class="p-2.5">DEF</th>
-                            <th scope="col" class="p-2.5">SPD</th>
+                            <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                ATK
+                            </th>
+                            <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                HP
+                            </th>
+                            <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                DEF
+                            </th>
+                            <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                SPD
+                            </th>
                         </tr>
                     </thead>
 
@@ -32,7 +49,7 @@
                             class="border-b dark:hover:bg-slate-900/50 dark:border-gray-700 cursor-pointer"
                             :class="{ 'bg-gray-600/50': (selectedHero === hero.id) }"
                             :data-modal-toggle="'popup-' + hero.id">
-                            <td class="px-1">
+                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden md:!table-cell': selectedHero }">
                                 <small>
                                     <pre>{{ hero.id }}</pre>
                                 </small>
@@ -44,26 +61,28 @@
                             <td class="px-1">
                                 <img :src="`/assets/symbol/icon_${hero.element}.png`"
                                     class="inline-block align-middle mr-1" width=20 height=20 alt="">
-                                <small>{{ hero.element }}</small>
+                                <small class="hidden xs:inline-block"
+                                    :class="{ '!hidden md:!inline-block': selectedHero }">{{ hero.element }}</small>
                             </td>
                             <td class="px-1">
                                 <img :src="`/assets/symbol/icon_class_${hero.role}.png`"
                                     class="inline-block align-middle mr-1" width=20 height=20 alt="">
-                                <small>{{ hero.role }}</small>
+                                <small class="hidden xs:inline-block"
+                                    :class="{ '!hidden md:!inline-block': selectedHero }">{{ hero.role }}</small>
                             </td>
                             <td class="px-1">
                                 <img :src="`/assets/symbol/${hero.rarity}-star.png`" style="height:15px" alt="">
                             </td>
-                            <td class="px-1">
+                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
                                 ????
                             </td>
-                            <td class="px-1">
+                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
                                 ????
                             </td>
-                            <td class="px-1">
+                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
                                 ????
                             </td>
-                            <td class="px-1">
+                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
                                 ????
                             </td>
                         </tr>
@@ -75,13 +94,34 @@
             </div>
         </section>
 
-        <section v-if="heroData" class="overflow-y-auto h-[82vh] fix-padding">
-            <div class="lg:w-[650px] container mx-auto">
+        <section v-if="heroData" class="w-full overflow-y-auto h-[84vh] fix-padding">
+            <div class="w-full xl:w-[650px] mr-auto relative">
+                <button @click="removeSelectedHero" type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm mb-2 p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-toggle="defaultModal">
+                    <!-- <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg> -->
+                    <svg aria-hidden="true" class="w-5 h-5 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    Close
+                    <span class="sr-only">Close modal</span>
+                </button>
 
-                <div class="flex gap-5">
+                <div class="flex gap-5 w-full">
                     <img :src="heroData.Hero_icon" class="w-[100px] h-[100px]" alt="">
                     <div>
-                        <h1 class="my-3 text-4xl">{{ heroData.name }}</h1>
+                        <h1 class="my-3 text-4xl">{{ heroData.name }}
+                            <span
+                                class="inline-block align-middle bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">{{ heroData.id }}</span>
+                        </h1>
+
                         <p class="my-1 text-sm">{{ heroData.description }}</p>
                     </div>
                 </div>
@@ -114,29 +154,31 @@
                 <Tabs variant="underline" v-model="activeTab" class="p-5">
                     <!-- class appends to content DIV for all tabs -->
                     <Tab name="stats" title="Stats">
-                        <ProgressBar label="Atack" :labelValue="heroStats.attack" :progress="Math.floor((heroStats.attack / 1435) * 50)" />
-                        <ProgressBar label="Health" :labelValue="heroStats.health"  :progress="Math.floor((heroStats.health / 7323) * 50)" />
-                        <ProgressBar label="Defense" :labelValue="heroStats.defense"  :progress="Math.floor((heroStats.defense / 776) * 50)" />
-                        <ProgressBar label="Speed" :labelValue="heroStats.speed"  :progress="Math.floor((heroStats.speed / 129) * 25)" />
-                        <ProgressBar label="Crit. Change" :labelValue="heroStats.critChance"  :progress="Math.floor((heroStats.critChance / 27) * 25)" />
-                        <ProgressBar label="Crit. Damage" :labelValue="heroStats.critDamage"  :progress="Math.floor((heroStats.critDamage / 165) * 25)" />
-                        <ProgressBar label="Effectiveness" :labelValue="heroStats.effectiveness"  :progress="Math.floor((heroStats.effectiveness / 30) * 25)" />
-                        <ProgressBar label="Effect Resistance" :labelValue="heroStats.resistance"  :progress="Math.floor((heroStats.resistance / 30) * 25)" />
-                        <ProgressBar label="Dual Attack Chance" :labelValue="heroStats.dualAttack"  :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam nunc sit amet nisi vehicula, vel
-                            vulputate lacus semper. Phasellus ut nulla at nunc feugiat blandit. Vestibulum tincidunt nibh id ante
-                            aliquam, et vestibulum tortor viverra. Mauris pulvinar quam quis eros sagittis, ut posuere nibh tempor.
-                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer
-                            eget leo gravida, suscipit nunc ut, rutrum erat. Pellentesque ornare turpis at varius pretium. Praesent
-                            vel diam magna. Etiam a rhoncus lacus. Quisque id luctus dui. Donec euismod orci non feugiat porta.
-                            Aenean tempor pharetra elit vel vulputate. Curabitur malesuada quis elit eu facilisis. Duis ultrices
-                            nisi nec tincidunt finibus. Donec quis eleifend nulla, eget interdum massa.
-                        </p>
+                        <h2 class="text-sm uppercase font-bold">Lv. 60 + 6 ⭐ stats</h2>
+                        <ProgressBar label="Attack" :labelValue="heroStats.attack"
+                            :progress="Math.floor((heroStats.attack / 1435) * 50)" />
+                        <ProgressBar label="Health" :labelValue="heroStats.health"
+                            :progress="Math.floor((heroStats.health / 7323) * 50)" />
+                        <ProgressBar label="Defense" :labelValue="heroStats.defense"
+                            :progress="Math.floor((heroStats.defense / 776) * 50)" />
+                        <ProgressBar label="Speed" :labelValue="heroStats.speed"
+                            :progress="Math.floor((heroStats.speed / 129) * 25)" />
+                        <ProgressBar label="Crit. Change" :labelValue="heroStats.critChance + '%'"
+                            :progress="Math.floor((heroStats.critChance / 27) * 25)" />
+                        <ProgressBar label="Crit. Damage" :labelValue="heroStats.critDamage + '%'"
+                            :progress="Math.floor((heroStats.critDamage / 165) * 25)" />
+                        <ProgressBar label="Effectiveness" :labelValue="heroStats.effectiveness + '%'"
+                            :progress="Math.floor((heroStats.effectiveness / 30) * 25)" />
+                        <ProgressBar label="Effect Resistance" :labelValue="heroStats.resistance + '%'"
+                            :progress="Math.floor((heroStats.resistance / 30) * 25)" />
+                        <ProgressBar label="Dual Attack Chance" :labelValue="heroStats.dualAttack + '%'"
+                            :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
                     </Tab>
                     <Tab name="information" title="Information">
-                        No hero data available
+                        <h2 class="text-m uppercase font-bold">📖 {{ heroData.name }}'s story</h2>
+                        <p>
+                            {{ heroData.story }}
+                        </p>
                     </Tab>
                     <Tab name="model-viewer" title="Model Viewer">
                         No hero data available
@@ -201,5 +243,10 @@ const removeSelectedHero = () => {
 }
 
 document.title = "Game Data | E7Compendium"
-
 </script>
+
+<style>
+.ml-auto-imp {
+    margin: 0 0 0 auto !important;
+}
+</style>

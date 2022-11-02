@@ -14,6 +14,9 @@ module.exports = {
         main: '#252B35',
         text: '#B0BBC8',
         nav: '#23272A'
+      },
+      screens: {
+        xs: '475px'
       }
     }
   },
