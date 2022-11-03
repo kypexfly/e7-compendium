@@ -116,7 +116,7 @@
                     <span class="sr-only">Close modal</span>
                 </button>
 
-                <div class="flex gap-5 w-full h-28">
+                <div class="flex gap-5 w-full min-h-[7rem]">
                     <img :src="heroData.Hero_icon" class="w-[100px] h-[100px]" alt="">
                     <div>
                         <h1 class="my-3 text-4xl">{{ heroData.name }}
@@ -207,7 +207,7 @@
                             </div>
                         </div>
 
-                        <ul class="list-inside text-sm mt-4 flex justify-evenly">
+                        <ul class="list-inside text-sm mt-4 flex flex-wrap justify-evenly gap-4">
                             <li class="flex gap-2 items-center border border-slate-700 rounded-md p-2">
                                 <img src="https://assets.epicsevendb.com/stat/cm_icon_stat_command.png" class="w-5 h-5" />
                                 <span class="font-bold text-slate-300">Command</span> {{ heroData.command }}

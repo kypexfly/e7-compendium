@@ -39,25 +39,66 @@
     <!-- <div class="justify-content-center">
       <global-search class="search-bar"></global-search>
     </div> -->
-    <main class="fix-padding">
-      <div class="container flex-wrap justify-center items-center mx-auto">
-        <div class="text-center fix-padding">
-          <strong>Current Features</strong>
+    <main class="container mx-auto fix-padding">
 
+      <div class="grid grid-cols-4 gap-5">
+
+        <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 ">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Current Features</h5>
+          <p class="font-normal text-gray-700 dark:text-gray-400">
           <ul class="my-3">
             <li>📄 Hero Information</li>
             <li>💠 Artifact Information</li>
             <li>📐 Mechanics Details</li>
             <li>⚔ Guides</li>
           </ul>
-          
-          <strong>Planned Additions</strong>
-          <ul class="list-disc my-3">
+          </p>
+        </div>
+
+        <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-700 ">
+          <h5 class="mb-2 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Mechanics
+          </h5>
+        </div>
+        <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-700 ">
+          <h5 class="mb-2 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Game Data
+          </h5>
+        </div>
+        <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-700 ">
+          <h5 class="mb-2 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Resources
+          </h5>
+        </div>
+        <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-700 ">
+          <h5 class="mb-2 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Tools
+          </h5>
+        </div>
+
+        <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 ">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Planned Additions</h5>
+          <p class="font-normal text-gray-700 dark:text-gray-400">
+          <ul class="my-3">
             <li>Morale Calculator</li>
             <li>Damage Calculator</li>
             <li>Language Support</li>
           </ul>
-          <p><i>Changelog: added basic functions</i></p>
+          </p>
+        </div>
+
+        <div
+          class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-900 dark:border-gray-700">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Changelog</h5>
+          <p class="font-normal text-gray-700 dark:text-gray-400">
+            <i>Added basic functions</i>
+          </p>
         </div>
       </div>
     </main>
@@ -80,13 +121,12 @@ main {
 
 .bg {
   background: transparent no-repeat scroll center center;
-  height: 100vh;
+  height: calc(100vh - 77px);
   min-height: 50vh;
   position: relative;
   -webkit-box-shadow: inset 0 0 30px #000;
   -moz-box-shadow: inset 0 0 30px #000;
   box-shadow: inset 0 0 30px #000;
-  margin-top: -76px;
 }
 
 .bg::before {
