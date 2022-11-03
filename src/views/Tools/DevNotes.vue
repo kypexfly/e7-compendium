@@ -26,7 +26,7 @@
                 </li>
             </ul>
 
-            <h2 class="text-2xl font-thin">About "Tools > Calculator" page</h2>
+            <!-- <h2 class="text-2xl font-thin">About "Tools > Calculator" page</h2>
             <ul class="list-disc m-6">
                 <li>
                     Might need better user interface, I don't like it.
@@ -37,7 +37,7 @@
                 <li>
                     Forgot to ask, but what type of calculator is it?
                 </li>
-            </ul>
+            </ul> -->
 
             <small>This section will deleted after finishing the project.</small>
         </div>

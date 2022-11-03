@@ -9,11 +9,11 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    {
-      path: '/mechanics',
-      name: 'mechanics',
-      component: () => import('../views/Mechanics.vue')
-    },
+    // {
+    //   path: '/mechanics',
+    //   name: 'mechanics',
+    //   component: () => import('../views/Mechanics.vue')
+    // },
     {
       path: '/search',
       name: 'search',
@@ -27,11 +27,11 @@ const router = createRouter({
       name: 'DevNotes',
       component: () => import('../views/Tools/DevNotes.vue')
     },
-    {
-      path: '/tools/calculator',
-      name: 'Calculator',
-      component: () => import('../views/Tools/Calculator.vue')
-    },
+    // {
+    //   path: '/tools/calculator',
+    //   name: 'Calculator',
+    //   component: () => import('../views/Tools/Calculator.vue')
+    // },
     // All routes that doesn't match goes to 404
     {
       path: '/:catchAll(.*)',

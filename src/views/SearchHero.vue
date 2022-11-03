@@ -18,6 +18,70 @@
 
             <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4"
                 :class="{ 'ml-auto mr-0': selectedHero }">
+                <p class="text-sm text-slate-400">Filter by:</p>
+                <!-- Filter options -->
+
+                <!-- Filter by roles -->
+                <div class="flex gap-5">
+                    <span class="w-20">Role</span>
+                    <div class="flex items-center">
+                        <input checked id="inline-checked-checkbox" type="checkbox" value="all"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checked-checkbox"
+                            class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">All</label>
+                    </div>
+                    <div v-for="role in filterOptions.roles" :key="role" class="flex items-center">
+                        <input id="inline-checkbox" type="checkbox" :value="role"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checkbox" class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                            <img :src="`/assets/symbol/icon_class_${role}.png`" class="inline-block align-middle mr-1"
+                                width=20 height=20 alt="">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Filter by elements -->
+                <div class="flex gap-5">
+                    <span class="w-20">Element</span>
+                    <div class="flex items-center">
+                        <input checked id="inline-checked-checkbox" type="checkbox" value="all"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checked-checkbox"
+                            class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">All</label>
+                    </div>
+                    <div v-for="element in filterOptions.elements" :key="element" class="flex items-center">
+                        <input id="inline-checkbox" type="checkbox" :value="element"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checkbox" class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                            <img :src="`/assets/symbol/icon_${element}.png`" class="inline-block align-middle mr-1"
+                                width=20 height=20 alt="">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Filter by rarity -->
+                <div class="flex gap-5">
+                    <span class="w-20">Rarity</span>
+                    <div class="flex items-center">
+                        <input checked id="inline-checked-checkbox" type="checkbox" value="all"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checked-checkbox"
+                            class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">All</label>
+                    </div>
+                    <div v-for="rarity in filterOptions.rarity" :key="rarity" class="flex items-center">
+                        <input id="inline-checkbox" type="checkbox" :value="rarity"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checkbox" class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                            <img :src="`/assets/symbol/${rarity}-star.png`" class="inline-block align-middle mr-1 h-[12px] w-auto" alt="">
+                        </label>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4"
+                :class="{ 'ml-auto mr-0': selectedHero }">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mx-auto">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-blue-600 dark:text-gray-200">
                         <tr>
@@ -209,7 +273,8 @@
 
                         <ul class="list-inside text-sm mt-4 flex flex-wrap justify-evenly gap-4">
                             <li class="flex gap-2 items-center border border-slate-700 rounded-md p-2">
-                                <img src="https://assets.epicsevendb.com/stat/cm_icon_stat_command.png" class="w-5 h-5" />
+                                <img src="https://assets.epicsevendb.com/stat/cm_icon_stat_command.png"
+                                    class="w-5 h-5" />
                                 <span class="font-bold text-slate-300">Command</span> {{ heroData.command }}
                             </li>
                             <li class="flex gap-2 items-center border border-slate-700 rounded-md p-2">
@@ -217,7 +282,8 @@
                                 <span class="font-bold text-slate-300">Charm</span> {{ heroData.charm }}
                             </li>
                             <li class="flex gap-2 items-center border border-slate-700 rounded-md p-2">
-                                <img src="https://assets.epicsevendb.com/stat/cm_icon_stat_politics.png" class="w-5 h-5" />
+                                <img src="https://assets.epicsevendb.com/stat/cm_icon_stat_politics.png"
+                                    class="w-5 h-5" />
                                 <span class="font-bold text-slate-300">Politics</span> {{ heroData.politics }}
                             </li>
                         </ul>
@@ -228,10 +294,17 @@
                         <p>
                             Data
                         </p>
-                        
+
                         <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
 
                         <h2 class="text-m uppercase font-bold">Memory Imprint</h2>
+                        <p>
+                            Data
+                        </p>
+
+                        <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+
+                        <h2 class="text-m uppercase font-bold">Relationships</h2>
                         <p>
                             Data
                         </p>
@@ -241,7 +314,7 @@
                         See model at <a :href="'https://www.e7vau.lt/portrait-viewer.html?id=' + heroData.id"
                             target="_blank" rel="noopener noreferrer">e7vau.lt</a>
                     </Tab>
-                    <Tab name="relationships" title="Relationships">
+                    <Tab name="skills" title="Skills">
                         No hero data available
                     </Tab>
                     <Tab name="guides" title="Guides">
@@ -263,7 +336,13 @@ import heroes from '../assets/data/hero-data.json'
 import { Tabs, Tab } from 'flowbite-vue'
 import ProgressBar from '../components/ProgressBar.vue';
 import heroStatService from '../services/hero-stat.service'
+document.title = "Game Data | E7Compendium"
 
+const filterOptions = {
+    roles: ["warrior", "knight", "thief", "ranger", "mage", "soul weaver"],
+    elements: ["fire", "ice", "earth", "light", "dark"],
+    rarity: [2,3,4,5]
+}
 const activeTab = ref('stats')
 const searchTerm = ref('')
 const selectedHero = ref('')
@@ -300,9 +379,6 @@ const removeSelectedHero = () => {
     console.log("selectedHero removed")
 }
 
-// let box = document.querySelector('#navbar');
-// console.log(box.offsetHeight)
-// document.title = "Game Data | E7Compendium"
 </script>
 
 <style scoped>
