@@ -80,7 +80,7 @@ main {
 
 .bg {
   background: transparent no-repeat scroll center center;
-  height: 500px;
+  height: 100vh;
   min-height: 50vh;
   position: relative;
   -webkit-box-shadow: inset 0 0 30px #000;

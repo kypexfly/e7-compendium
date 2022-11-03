@@ -1,17 +1,19 @@
 <template>
-    <main class="flex justify-center" @keyup.esc="removeSelectedHero" tabindex="0">
+    <component :is="'style'" type="text/css">
+        html {
+        overflow: hidden;
+        }
+        footer {
+        display: none;
+        }
+    </component>
+    <main class="flex justify-center overflow-hidden" @keyup.esc="removeSelectedHero" tabindex="0">
         <section class="w-full overflow-y-auto"
-            :class="{ 'h-[82vh] hidden sm:block basis-2/3 lg:basis-auto border-r border-x-slate-700': selectedHero }">
+            :class="{ 'h-full hidden sm:block basis-2/3 lg:basis-auto border-r border-x-slate-700': selectedHero }">
 
             <div class="w-full lg:w-[650px] sticky top-0 z-10 container my-4 mx-auto"
                 :class="{ 'ml-auto mr-0': selectedHero }">
                 <SearchBar v-model="searchTerm" />
-                <!-- <ul class="list-disc">
-                    <li><small>Search term working (for now 😀): {{ searchTerm }}</small></li>
-                    <li><small>Mercenary's Medicine: wrong avatar</small></li>
-                    <li><small>Demon Blood Gem: wrong avatar</small></li>
-                    <li><small>Hero selected: {{ selectedHero }}</small></li>
-                </ul> -->
             </div>
 
             <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4"
@@ -46,7 +48,7 @@
 
                     <tbody>
                         <tr v-for="hero in filteredHeroes" :key="hero.id" @click="showMore(hero.id)"
-                            class="border-b dark:hover:bg-slate-900/50 dark:border-gray-700 cursor-pointer"
+                            class="border-b dark:hover:bg-gray-600/50 dark:border-gray-700 cursor-pointer"
                             :class="{ 'bg-gray-600/50': (selectedHero === hero.id) }"
                             :data-modal-toggle="'popup-' + hero.id">
                             <td class="px-1 hidden sm:table-cell" :class="{ '!hidden md:!table-cell': selectedHero }">
@@ -94,7 +96,7 @@
             </div>
         </section>
 
-        <section v-if="heroData" class="w-full overflow-y-auto h-[84vh] fix-padding">
+        <section v-if="heroData" class="w-full overflow-y-auto h-full fix-padding">
             <div class="w-full xl:w-[650px] mr-auto relative">
                 <button @click="removeSelectedHero" type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm mb-2 p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -114,15 +116,17 @@
                     <span class="sr-only">Close modal</span>
                 </button>
 
-                <div class="flex gap-5 w-full">
+                <div class="flex gap-5 w-full h-28">
                     <img :src="heroData.Hero_icon" class="w-[100px] h-[100px]" alt="">
                     <div>
                         <h1 class="my-3 text-4xl">{{ heroData.name }}
                             <span
-                                class="inline-block align-middle bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">{{ heroData.id }}</span>
+                                class="inline-block align-middle bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">{{
+                                        heroData.id
+                                }}</span>
                         </h1>
 
-                        <p class="my-1 text-sm">{{ heroData.description }}</p>
+                        <p class="my-1 text-sm ">{{ heroData.description }}</p>
                     </div>
                 </div>
 
@@ -154,7 +158,7 @@
                 <Tabs variant="underline" v-model="activeTab" class="p-5">
                     <!-- class appends to content DIV for all tabs -->
                     <Tab name="stats" title="Stats">
-                        <h2 class="text-sm uppercase font-bold">Lv. 60 + 6 ⭐ stats</h2>
+                        <h2 class="text-m uppercase font-bold">Lv. 60 + 6 ⭐ stats</h2>
                         <ProgressBar label="Attack" :labelValue="heroStats.attack"
                             :progress="Math.floor((heroStats.attack / 1435) * 50)" />
                         <ProgressBar label="Health" :labelValue="heroStats.health"
@@ -175,13 +179,67 @@
                             :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
                     </Tab>
                     <Tab name="information" title="Information">
-                        <h2 class="text-m uppercase font-bold">📖 {{ heroData.name }}'s story</h2>
+                        <h2 class="text-m uppercase font-bold">{{ heroData.name }}'s story</h2>
                         <p>
                             {{ heroData.story }}
                         </p>
+
+                        <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+
+                        <h2 class="text-m uppercase font-bold">Specialty Skill</h2>
+                        <div class="flex gap-5 w-full py-4 items-center">
+                            <img :src="heroData.mission_specialty_icon" class="w-[74px] h-[74px]" alt="">
+                            <div>
+                                <h1 class="text-xl">{{ heroData.mission_specialty_name }}</h1>
+
+                                <p class="my-1 text-sm ">{{ heroData.mission_specialty_description }}</p>
+                                <span
+                                    class="inline-block align-middle bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                                    {{ heroData.mission_attribute_name }}
+                                </span>
+                                <span
+                                    class="inline-block align-middle bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                                    {{ heroData.mission_specialty_effect_type === 'reward_bonus' ? 'Reward Bonus' :
+                                            'Time Reduce'
+                                    }}
+                                    {{ heroData.mission_specialty_effect_value * 100 }}%
+                                </span>
+                            </div>
+                        </div>
+
+                        <ul class="list-inside text-sm mt-4 flex justify-evenly">
+                            <li class="flex gap-2 items-center border border-slate-700 rounded-md p-2">
+                                <img src="https://assets.epicsevendb.com/stat/cm_icon_stat_command.png" class="w-5 h-5" />
+                                <span class="font-bold text-slate-300">Command</span> {{ heroData.command }}
+                            </li>
+                            <li class="flex gap-2 items-center border border-slate-700 rounded-md p-2">
+                                <img src="https://assets.epicsevendb.com/stat/cm_icon_stat_charm.png" class="w-5 h-5" />
+                                <span class="font-bold text-slate-300">Charm</span> {{ heroData.charm }}
+                            </li>
+                            <li class="flex gap-2 items-center border border-slate-700 rounded-md p-2">
+                                <img src="https://assets.epicsevendb.com/stat/cm_icon_stat_politics.png" class="w-5 h-5" />
+                                <span class="font-bold text-slate-300">Politics</span> {{ heroData.politics }}
+                            </li>
+                        </ul>
+
+                        <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+
+                        <h2 class="text-m uppercase font-bold">Camping</h2>
+                        <p>
+                            Data
+                        </p>
+                        
+                        <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+
+                        <h2 class="text-m uppercase font-bold">Memory Imprint</h2>
+                        <p>
+                            Data
+                        </p>
+
                     </Tab>
                     <Tab name="model-viewer" title="Model Viewer">
-                        No hero data available
+                        See model at <a :href="'https://www.e7vau.lt/portrait-viewer.html?id=' + heroData.id"
+                            target="_blank" rel="noopener noreferrer">e7vau.lt</a>
                     </Tab>
                     <Tab name="relationships" title="Relationships">
                         No hero data available
@@ -242,11 +300,13 @@ const removeSelectedHero = () => {
     console.log("selectedHero removed")
 }
 
-document.title = "Game Data | E7Compendium"
+// let box = document.querySelector('#navbar');
+// console.log(box.offsetHeight)
+// document.title = "Game Data | E7Compendium"
 </script>
 
-<style>
-.ml-auto-imp {
-    margin: 0 0 0 auto !important;
+<style scoped>
+main {
+    height: calc(100vh - 77px);
 }
 </style>
