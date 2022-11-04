@@ -22,9 +22,10 @@
                 :class="{ 'ml-auto mr-0': selectedHero }">
 
                 <!-- Search history -->
-                <p class="mb-1 border-t border-slate-700 flex justify-between items-center">
+                <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">
                     Search history
-                    <button @click="searchHistory.clear()" class="dark:bg-slate-700 dark:hover:bg-slate-700 ml-2">
+                    <button @click="searchHistory.clear()"
+                        class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
                         Clear
                     </button>
                 </p>
@@ -37,8 +38,9 @@
                 </div>
                 <!-- </StackedAvatars> -->
 
-                <p class="mb-1 border-t border-slate-700 flex justify-between items-center">Filter by
-                    <button @click="resetSelectedFilter" class="dark:bg-slate-700 dark:hover:bg-slate-700 ml-2">
+                <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">Filter by
+                    <button @click="resetSelectedFilter"
+                        class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
                         Clear
                     </button>
                 </p>
@@ -133,7 +135,7 @@
                         <tr>
                             <th scope="col" class="p-2.5 hidden sm:table-cell"
                                 :class="{ '!hidden md:!table-cell': selectedHero }">ID</th>
-                            <th scope="col" class="p-2.5">Name</th>
+                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortByName" >Name</th>
                             <th scope="col" class="p-2.5">Element</th>
                             <th scope="col" class="p-2.5">Class</th>
                             <th scope="col" class="p-2.5">Grade</th>
@@ -298,7 +300,7 @@
                                 <h1 class="text-xl">{{ heroData.mission_specialty_name }}</h1>
 
                                 <p class="my-1 text-sm ">{{ heroData.mission_specialty_description }}</p>
-                                <span
+                                <span v-if="heroData.mission_attribute_name"
                                     class="inline-block align-middle bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
                                     {{ heroData.mission_attribute_name }}
                                 </span>
@@ -371,12 +373,13 @@
 </template>
 
 <script setup>
+import _ from 'lodash'
 import SearchBar from '../components/SearchBar.vue';
 import { ref, computed } from 'vue';
-import heroes from '../assets/data/hero-data.json'
 import { Tabs, Tab, Button, Avatar } from 'flowbite-vue'
 import ProgressBar from '../components/ProgressBar.vue';
 import heroStatService from '../services/hero-stat.service'
+import HEROES from '../assets/data/hero-data.json'
 
 document.title = "Game Data | E7Compendium"
 
@@ -384,6 +387,8 @@ document.title = "Game Data | E7Compendium"
 const activeTab = ref('stats')
 
 // Filtering heroes feature
+
+const heroes = ref(HEROES)
 
 const filterOptions = {
     roles: ["warrior", "knight", "thief", "ranger", "mage", "soul weaver"],
@@ -412,14 +417,12 @@ const checkMultipleFilterValues = (value, filterArray) => {
 }
 
 const resetSelectedFilter = () => {
-    selectedFilter.value = {
-        roles: [],
-        elements: [],
-        rarities: []
-    }
+    selectedFilter.value.roles.length = 0
+    selectedFilter.value.elements.length = 0
+    selectedFilter.value.rarities.length = 0
 }
 
-const filteredHeroes = computed(() => heroes.filter((hero) => {
+const filteredHeroes = computed(() => heroes.value.filter((hero) => {
     console.log("computing filter")
     return (hero.name.toLowerCase().indexOf(searchTerm.value.toLowerCase()) > -1
         && checkMultipleFilterValues(hero.role, selectedFilter.value.roles) // [...selectedFilter.roles] -> converts Sets() to Arrays[]
@@ -428,8 +431,16 @@ const filteredHeroes = computed(() => heroes.filter((hero) => {
     )
 }))
 
+// Sorting heroes feature
+
+const sortByName = () => {
+    console.log('sortByName() triggered')
+    // heroes.value = _.sortBy(heroes.value, 'name')
+    // console.log('sortByName:', heroes.value)
+}
+
 // Hero profile feature (right side)
-const heroData = computed(() => heroes.filter((hero) => {
+const heroData = computed(() => heroes.value.filter((hero) => {
     return hero.id === selectedHero.value
 })[0])
 
