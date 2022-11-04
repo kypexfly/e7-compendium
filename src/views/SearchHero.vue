@@ -210,7 +210,7 @@
 
         <!-- Second panel  -->
         <section id="second-panel" v-if="heroData" class="w-full overflow-y-auto h-full fix-padding" :class="{'!basis-[1950px]' : selectedExtra}">
-            <div class="w-full xl:w-[650px] mr-auto relative">
+            <div class="w-full xl:w-[650px] mr-auto relative" :class="{'!mx-auto' : selectedExtra}">
                 <button @click="removeSelectedHero" type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm mb-2 p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-toggle="defaultModal">
