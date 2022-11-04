@@ -10,7 +10,7 @@
     <main class="flex justify-center overflow-hidden" @keyup.esc="removeSelectedHero" tabindex="0">
         <!-- Left side panel  -->
         <section class="w-full overflow-y-auto"
-            :class="{ 'h-full hidden sm:block basis-2/3 lg:basis-auto border-r border-x-slate-700': selectedHero }">
+            :class="{ 'h-full hidden sm:block basis-2/3 xl:basis-auto border-r border-x-slate-700': selectedHero }">
 
             <div class="w-full lg:w-[650px] sticky top-0 z-10 container my-4 mx-auto"
                 :class="{ 'ml-auto mr-0': selectedHero }">
@@ -22,21 +22,26 @@
                 :class="{ 'ml-auto mr-0': selectedHero }">
 
                 <!-- Search history -->
-                <p class="mb-1">
+                <p class="mb-1 border-t border-slate-700 flex justify-between items-center">
                     Search history
-                    <button @click="searchHistory.clear()" class="rounded-md dark:bg-slate-800 dark:hover:bg-slate-700 ml-2 px-2 py-1">
-                        Delete
+                    <button @click="searchHistory.clear()" class="dark:bg-slate-700 dark:hover:bg-slate-700 ml-2">
+                        Clear
                     </button>
                 </p>
                 <!-- <StackedAvatars> -->
-                <div class="flex">
-                    <Avatar v-for="heroId in searchHistory" :key="heroId" class="cursor-pointer"
+                <div class="flex flex-wrap">
+                    <Avatar v-if="!searchHistory.size" rounded />
+                    <Avatar v-else v-for="heroId in searchHistory" :key="heroId" class="cursor-pointer"
                         @click="showMore(heroId)"
                         :img="'https://assets.epicsevendb.com/_source/face/' + heroId + '_s.png'" rounded />
                 </div>
                 <!-- </StackedAvatars> -->
 
-                <p class="mb-1">Filter by</p>
+                <p class="mb-1 border-t border-slate-700 flex justify-between items-center">Filter by
+                    <button @click="resetSelectedFilter" class="dark:bg-slate-700 dark:hover:bg-slate-700 ml-2">
+                        Clear
+                    </button>
+                </p>
 
                 <!-- For testing purposes -->
                 <!-- <div class="flex justify-between my-4">
@@ -404,6 +409,14 @@ const checkMultipleFilterValues = (value, filterArray) => {
     }
 
     return tempChecks.some(value => value === true)
+}
+
+const resetSelectedFilter = () => {
+    selectedFilter.value = {
+        roles: [],
+        elements: [],
+        rarities: []
+    }
 }
 
 const filteredHeroes = computed(() => heroes.filter((hero) => {
