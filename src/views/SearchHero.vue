@@ -8,6 +8,7 @@
         }
     </component>
     <main class="flex justify-center overflow-hidden" @keyup.esc="removeSelectedHero" tabindex="0">
+        <!-- Left Side  -->
         <section class="w-full overflow-y-auto"
             :class="{ 'h-full hidden sm:block basis-2/3 lg:basis-auto border-r border-x-slate-700': selectedHero }">
 
@@ -16,70 +17,94 @@
                 <SearchBar v-model="searchTerm" />
             </div>
 
-            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4"
+            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4 text-slate-400 text-sm"
                 :class="{ 'ml-auto mr-0': selectedHero }">
-                <p class="text-sm text-slate-400">Filter by:</p>
+                <p class="mb-1">Filter by</p>
                 <!-- Filter options -->
 
-                <!-- Filter by roles -->
-                <div class="flex gap-5">
-                    <span class="w-20">Role</span>
-                    <div class="flex items-center">
-                        <input checked id="inline-checked-checkbox" type="checkbox" value="all"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="inline-checked-checkbox"
-                            class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">All</label>
-                    </div>
-                    <div v-for="role in filterOptions.roles" :key="role" class="flex items-center">
-                        <input id="inline-checkbox" type="checkbox" :value="role"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="inline-checkbox" class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                            <img :src="`/assets/symbol/icon_class_${role}.png`" class="inline-block align-middle mr-1"
-                                width=20 height=20 alt="">
-                        </label>
-                    </div>
+                <!-- For testing purposes -->
+                <!-- <div class="flex justify-between my-4">
+                    <span>Roles: {{ selectedFilter.roles }}</span>
+                    <span>Elements: {{ selectedFilter.elements }}</span>
+                    <span>Rarities: {{ selectedFilter.rarities }}</span>
+                </div> -->
+
+                <!-- Filter by role -->
+                <div class="flex flex-wrap justify-between gap-2">
+                    <ul class="flex gap-1">
+                        <li v-for="role in filterOptions.roles" :key="role">
+                            <input type="checkbox" :id="role + '-option'" :value="role" class="hidden peer"
+                                v-model="selectedFilter.roles">
+                            <label :for="role + '-option'"
+                                class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <img :src="`/assets/symbol/icon_class_${role}.png`"
+                                    class="inline-block align-middle w-5 h-5" alt="">
+                            </label>
+                        </li>
+                        <li>
+                            <button @click="selectedFilter.roles.length = 0"
+                                class="inline-flex justify-center items-center p-1 w-5 h-8 cursor-pointer">
+                                <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Filter by element -->
+                    <ul class="flex gap-1">
+                        <li v-for="element in filterOptions.elements" :key="element">
+                            <input type="checkbox" :id="element + '-option'" :value="element" class="hidden peer"
+                                v-model="selectedFilter.elements">
+                            <label :for="element + '-option'"
+                                class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <img :src="`/assets/symbol/icon_${element}.png`"
+                                    class="inline-block align-middle w-5 h-5" alt="">
+                            </label>
+                        </li>
+                        <li>
+                            <button @click="selectedFilter.elements.length = 0"
+                                class="inline-flex justify-center items-center p-1 w-5 h-8 cursor-pointer">
+                                <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Filter by rarity -->
+                    <ul class="flex gap-1">
+                        <li v-for="rarity in filterOptions.rarities" :key="rarity">
+                            <input type="checkbox" :id="rarity + '-option'" :value="rarity" class="hidden peer"
+                                v-model="selectedFilter.rarities">
+                            <label :for="rarity + '-option'"
+                                class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <span class="text-xs text-center mr-1">{{ rarity }}</span>
+                                <img src="/assets/symbol/1-star.png" class="inline-block align-middle w-4 h-4" alt="">
+                            </label>
+                        </li>
+                        <li>
+                            <button @click="selectedFilter.rarities.length = 0"
+                                class="inline-flex justify-center items-center p-1 w-5 h-8 cursor-pointer">
+                                <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Filter by elements -->
-                <div class="flex gap-5">
-                    <span class="w-20">Element</span>
-                    <div class="flex items-center">
-                        <input checked id="inline-checked-checkbox" type="checkbox" value="all"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="inline-checked-checkbox"
-                            class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">All</label>
-                    </div>
-                    <div v-for="element in filterOptions.elements" :key="element" class="flex items-center">
-                        <input id="inline-checkbox" type="checkbox" :value="element"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="inline-checkbox" class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                            <img :src="`/assets/symbol/icon_${element}.png`" class="inline-block align-middle mr-1"
-                                width=20 height=20 alt="">
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter by rarity -->
-                <div class="flex gap-5">
-                    <span class="w-20">Rarity</span>
-                    <div class="flex items-center">
-                        <input checked id="inline-checked-checkbox" type="checkbox" value="all"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="inline-checked-checkbox"
-                            class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">All</label>
-                    </div>
-                    <div v-for="rarity in filterOptions.rarity" :key="rarity" class="flex items-center">
-                        <input id="inline-checkbox" type="checkbox" :value="rarity"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="inline-checkbox" class="w-max ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                            <img :src="`/assets/symbol/${rarity}-star.png`" class="inline-block align-middle mr-1 h-[12px] w-auto" alt="">
-                        </label>
-                    </div>
-                </div>
-
-
             </div>
 
+            <!-- Table with heroes data -->
             <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4"
                 :class="{ 'ml-auto mr-0': selectedHero }">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mx-auto">
@@ -160,23 +185,24 @@
             </div>
         </section>
 
+        <!--  -->
         <section v-if="heroData" class="w-full overflow-y-auto h-full fix-padding">
             <div class="w-full xl:w-[650px] mr-auto relative">
                 <button @click="removeSelectedHero" type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm mb-2 p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-toggle="defaultModal">
-                    <!-- <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-300" fill="none"
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-300" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
                         </path>
-                    </svg> -->
-                    <svg aria-hidden="true" class="w-5 h-5 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20"
+                    </svg>
+                    <!-- <svg aria-hidden="true" class="w-5 h-5 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                             clip-rule="evenodd"></path>
-                    </svg>
-                    Close
+                    </svg> -->
+                    go back
                     <span class="sr-only">Close modal</span>
                 </button>
 
@@ -336,27 +362,56 @@ import heroes from '../assets/data/hero-data.json'
 import { Tabs, Tab } from 'flowbite-vue'
 import ProgressBar from '../components/ProgressBar.vue';
 import heroStatService from '../services/hero-stat.service'
+
 document.title = "Game Data | E7Compendium"
+
+// # Tabs in profile
+const activeTab = ref('stats')
+
+// Filtering heroes feature
 
 const filterOptions = {
     roles: ["warrior", "knight", "thief", "ranger", "mage", "soul weaver"],
     elements: ["fire", "ice", "earth", "light", "dark"],
-    rarity: [2,3,4,5]
+    rarities: [3, 4, 5]
 }
-const activeTab = ref('stats')
+
+const selectedFilter = ref({
+    roles: [],
+    elements: [],
+    rarities: []
+})
+
 const searchTerm = ref('')
 const selectedHero = ref('')
 
+const checkMultipleFilterValues = (value, filterArray) => {
+    if (!filterArray.length) return true
+
+    let tempChecks = [];
+    for (let i = 0; i < filterArray.length; i++) {
+        tempChecks.push(value.indexOf(filterArray[i]) > -1);
+    }
+
+    return tempChecks.some(value => value === true)
+}
+
 const filteredHeroes = computed(() => heroes.filter((hero) => {
-    return hero.name.toLowerCase().indexOf(searchTerm.value.toLowerCase()) > -1;
+    console.log("computing filter")
+    return (hero.name.toLowerCase().indexOf(searchTerm.value.toLowerCase()) > -1
+        && checkMultipleFilterValues(hero.role, selectedFilter.value.roles) // [...selectedFilter.roles] -> converts Sets() to Arrays[]
+        && checkMultipleFilterValues(hero.element, selectedFilter.value.elements)
+        && checkMultipleFilterValues(hero.rarity, selectedFilter.value.rarities)
+    )
 }))
 
+// Hero profile feature (right side)
 const heroData = computed(() => heroes.filter((hero) => {
     return hero.id === selectedHero.value
 })[0])
 
 const heroStats = computed(() => {
-    console.log("computing hero stats")
+    console.log("computing heroStats")
     return {
         attack: heroStatService.getAttack(heroData.value, 60, 6),
         health: heroStatService.getHealth(heroData.value, 60, 6),
