@@ -8,7 +8,7 @@
         }
     </component>
     <main class="flex justify-center overflow-hidden" @keyup.esc="removeSelectedHero" tabindex="0">
-        <!-- Left Side  -->
+        <!-- Left side panel  -->
         <section class="w-full overflow-y-auto"
             :class="{ 'h-full hidden sm:block basis-2/3 lg:basis-auto border-r border-x-slate-700': selectedHero }">
 
@@ -17,10 +17,26 @@
                 <SearchBar v-model="searchTerm" />
             </div>
 
+            <!-- Filter options -->
             <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4 text-slate-400 text-sm"
                 :class="{ 'ml-auto mr-0': selectedHero }">
+
+                <!-- Search history -->
+                <p class="mb-1">
+                    Search history
+                    <button @click="searchHistory.clear()" class="rounded-md dark:bg-slate-800 dark:hover:bg-slate-700 ml-2 px-2 py-1">
+                        Delete
+                    </button>
+                </p>
+                <!-- <StackedAvatars> -->
+                <div class="flex">
+                    <Avatar v-for="heroId in searchHistory" :key="heroId" class="cursor-pointer"
+                        @click="showMore(heroId)"
+                        :img="'https://assets.epicsevendb.com/_source/face/' + heroId + '_s.png'" rounded />
+                </div>
+                <!-- </StackedAvatars> -->
+
                 <p class="mb-1">Filter by</p>
-                <!-- Filter options -->
 
                 <!-- For testing purposes -->
                 <!-- <div class="flex justify-between my-4">
@@ -43,7 +59,7 @@
                         </li>
                         <li>
                             <button @click="selectedFilter.roles.length = 0"
-                                class="inline-flex justify-center items-center p-1 w-5 h-8 cursor-pointer">
+                                class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
                                 <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -67,7 +83,7 @@
                         </li>
                         <li>
                             <button @click="selectedFilter.elements.length = 0"
-                                class="inline-flex justify-center items-center p-1 w-5 h-8 cursor-pointer">
+                                class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
                                 <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -91,7 +107,7 @@
                         </li>
                         <li>
                             <button @click="selectedFilter.rarities.length = 0"
-                                class="inline-flex justify-center items-center p-1 w-5 h-8 cursor-pointer">
+                                class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
                                 <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -185,8 +201,8 @@
             </div>
         </section>
 
-        <!--  -->
-        <section v-if="heroData" class="w-full overflow-y-auto h-full fix-padding">
+        <!-- Right side panel  -->
+        <section id="right-panel" v-if="heroData" class="w-full overflow-y-auto h-full fix-padding">
             <div class="w-full xl:w-[650px] mr-auto relative">
                 <button @click="removeSelectedHero" type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm mb-2 p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -196,12 +212,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
                         </path>
                     </svg>
-                    <!-- <svg aria-hidden="true" class="w-5 h-5 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg> -->
                     go back
                     <span class="sr-only">Close modal</span>
                 </button>
@@ -359,7 +369,7 @@
 import SearchBar from '../components/SearchBar.vue';
 import { ref, computed } from 'vue';
 import heroes from '../assets/data/hero-data.json'
-import { Tabs, Tab } from 'flowbite-vue'
+import { Tabs, Tab, Button, Avatar } from 'flowbite-vue'
 import ProgressBar from '../components/ProgressBar.vue';
 import heroStatService from '../services/hero-stat.service'
 
@@ -410,6 +420,8 @@ const heroData = computed(() => heroes.filter((hero) => {
     return hero.id === selectedHero.value
 })[0])
 
+const searchHistory = ref(new Set(JSON.parse(window.localStorage.getItem('searchHistory'))))
+
 const heroStats = computed(() => {
     console.log("computing heroStats")
     return {
@@ -426,6 +438,9 @@ const heroStats = computed(() => {
 })
 
 const showMore = (heroId) => {
+    searchHistory.value.add(heroId)
+    window.localStorage.setItem('searchHistory', JSON.stringify([...searchHistory.value]))
+    if (heroId === selectedHero.value) return selectedHero.value = ""
     selectedHero.value = heroId
     console.log("hero.id:", heroId)
 }
@@ -436,8 +451,12 @@ const removeSelectedHero = () => {
 
 </script>
 
-<style scoped>
+<style>
 main {
     height: calc(100vh - 77px);
+}
+
+#right-panel * {
+    transition: 0.2s ease !important;
 }
 </style>
