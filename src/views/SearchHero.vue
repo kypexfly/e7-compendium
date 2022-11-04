@@ -8,17 +8,17 @@
         }
     </component>
     <main class="flex justify-center overflow-hidden" @keyup.esc="removeSelectedHero" tabindex="0">
-        <!-- Left side panel  -->
+        <!-- First panel  -->
         <section class="w-full overflow-y-auto"
-            :class="{ 'h-full hidden sm:block basis-2/3 xl:basis-auto border-r border-x-slate-700': selectedHero }">
+            :class="{ 'h-full hidden sm:block basis-2/3 xl:basis-auto border-r border-x-slate-700': selectedHero}" >
 
-            <div class="w-full lg:w-[650px] sticky top-0 z-10 container my-4 mx-auto"
+            <div class="w-full lg:max-w-[650px] sticky top-0 z-10 container my-4 mx-auto"
                 :class="{ 'ml-auto mr-0': selectedHero }">
                 <SearchBar v-model="searchTerm" />
             </div>
 
             <!-- Filter options -->
-            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4 text-slate-400 text-sm"
+            <div class="container lg:max-w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4 text-slate-400 text-sm"
                 :class="{ 'ml-auto mr-0': selectedHero }">
 
                 <!-- Search history -->
@@ -33,7 +33,7 @@
                 <div class="flex flex-wrap">
                     <Avatar v-if="!searchHistory.size" rounded />
                     <Avatar v-else v-for="heroId in searchHistory" :key="heroId" class="cursor-pointer"
-                        @click="showMore(heroId)"
+                        @click="showHeroData(heroId)"
                         :img="'https://assets.epicsevendb.com/_source/face/' + heroId + '_s.png'" rounded />
                 </div>
                 <!-- </StackedAvatars> -->
@@ -159,7 +159,7 @@
                     </thead>
 
                     <tbody>
-                        <tr v-for="hero in filteredHeroes" :key="hero.id" @click="showMore(hero.id)"
+                        <tr v-for="hero in filteredHeroes" :key="hero.id" @click="showHeroData(hero.id)"
                             class="border-b dark:hover:bg-gray-600/50 dark:border-gray-700 cursor-pointer"
                             :class="{ 'bg-gray-600/50': (selectedHero === hero.id) }"
                             :data-modal-toggle="'popup-' + hero.id">
@@ -208,8 +208,8 @@
             </div>
         </section>
 
-        <!-- Right side panel  -->
-        <section id="right-panel" v-if="heroData" class="w-full overflow-y-auto h-full fix-padding">
+        <!-- Second panel  -->
+        <section id="second-panel" v-if="heroData" class="w-full overflow-y-auto h-full fix-padding" :class="{'!basis-[1950px]' : selectedExtra}">
             <div class="w-full xl:w-[650px] mr-auto relative">
                 <button @click="removeSelectedHero" type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm mb-2 p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -219,7 +219,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
                         </path>
                     </svg>
-                    go back
+                    back
                     <span class="sr-only">Close modal</span>
                 </button>
 
@@ -263,8 +263,12 @@
                 </div>
 
                 <Tabs variant="underline" v-model="activeTab" class="p-5">
+
                     <!-- class appends to content DIV for all tabs -->
                     <Tab name="stats" title="Stats">
+
+                        <button @click="showExtra" class="text-blue-400 bg-slate-700 p-3">OPEN THIRD PANEL</button>
+
                         <h2 class="text-m uppercase font-bold">Lv. 60 + 6 ⭐ stats</h2>
                         <ProgressBar label="Attack" :labelValue="heroStats.attack"
                             :progress="Math.floor((heroStats.attack / 1435) * 50)" />
@@ -368,6 +372,24 @@
             </div>
         </section>
 
+        <!-- Third panel  -->
+        <section id="third-panel" v-if="selectedHero && selectedExtra" class="w-full overflow-y-auto h-full fix-padding"
+            :class="{ 'h-full hidden sm:block basis-2/3 xl:basis-auto border-l border-x-slate-700': selectedHero}">
+           
+            <button @click="removeSelectedExtra" type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm mb-2 p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-toggle="defaultModal">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                </path>
+            </svg>
+            back
+            <span class="sr-only">Close modal</span>
+        </button>
+
+        </section>
+
     </main>
 
 </template>
@@ -404,6 +426,7 @@ const selectedFilter = ref({
 
 const searchTerm = ref('')
 const selectedHero = ref('')
+const selectedExtra = ref('')
 
 const checkMultipleFilterValues = (value, filterArray) => {
     if (!filterArray.length) return true
@@ -461,8 +484,9 @@ const heroStats = computed(() => {
     }
 })
 
-const showMore = (heroId) => {
+const showHeroData = (heroId) => {
     if (heroId === selectedHero.value) return selectedHero.value = ""
+    selectedExtra.value = '' // close third panel
     selectedHero.value = heroId
 
     if (searchHistory.value.size < 16) {
@@ -475,11 +499,20 @@ const showMore = (heroId) => {
         window.localStorage.setItem('searchHistory', JSON.stringify([...searchHistory.value]))
     }
 
-    console.log(`trigger: showMore(${heroId})`)
+    console.log(`trigger: showHeroData(${heroId})`)
 }
+
+const showExtra = () => {
+    selectedExtra.value = 'somevalue'
+}
+
 const removeSelectedHero = () => {
     selectedHero.value = ''
     console.log("selectedHero removed")
+}
+const removeSelectedExtra = () => {
+    selectedExtra.value = ''
+    console.log("selectedExtra removed")
 }
 
 </script>
@@ -489,7 +522,7 @@ main {
     height: calc(100vh - 77px);
 }
 
-#right-panel * {
+#second-panel * {
     transition: 0.2s ease !important;
 }
 </style>
