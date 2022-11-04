@@ -26,7 +26,7 @@
                     Search history
                     <button @click="searchHistory.clear()"
                         class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                        Clear
+                        clean history
                     </button>
                 </p>
                 <!-- <StackedAvatars> -->
@@ -41,7 +41,7 @@
                 <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">Filter by
                     <button @click="resetSelectedFilter"
                         class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                        Clear
+                        remove all filters
                     </button>
                 </p>
 
@@ -133,12 +133,12 @@
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mx-auto">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-blue-600 dark:text-gray-200">
                         <tr>
-                            <th scope="col" class="p-2.5 hidden sm:table-cell"
+                            <th scope="col" class="p-2.5 hidden sm:table-cell cursor-pointer" @click="sortTableBy('id')"
                                 :class="{ '!hidden md:!table-cell': selectedHero }">ID</th>
-                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortByName" >Name</th>
-                            <th scope="col" class="p-2.5">Element</th>
-                            <th scope="col" class="p-2.5">Class</th>
-                            <th scope="col" class="p-2.5">Grade</th>
+                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('name')" >Name</th>
+                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('element')">Element</th>
+                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('role')">Class</th>
+                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('rarity')">Grade</th>
                             <th scope="col" class="p-2.5 hidden sm:table-cell"
                                 :class="{ '!hidden lg:!table-cell': selectedHero }">
                                 ATK
@@ -423,7 +423,7 @@ const resetSelectedFilter = () => {
 }
 
 const filteredHeroes = computed(() => heroes.value.filter((hero) => {
-    console.log("computing filter")
+    console.log(`trigger: heroes.filter() by: [${selectedFilter.value.roles}], [${selectedFilter.value.elements}], [${selectedFilter.value.rarities}]`)
     return (hero.name.toLowerCase().indexOf(searchTerm.value.toLowerCase()) > -1
         && checkMultipleFilterValues(hero.role, selectedFilter.value.roles) // [...selectedFilter.roles] -> converts Sets() to Arrays[]
         && checkMultipleFilterValues(hero.element, selectedFilter.value.elements)
@@ -433,9 +433,9 @@ const filteredHeroes = computed(() => heroes.value.filter((hero) => {
 
 // Sorting heroes feature
 
-const sortByName = () => {
-    console.log('sortByName() triggered')
-    // heroes.value = _.sortBy(heroes.value, 'name')
+const sortTableBy = (property) => {
+    console.log(`function sortBy(${property})`)
+    heroes.value = _.sortBy(heroes.value, property)
     // console.log('sortByName:', heroes.value)
 }
 
@@ -447,7 +447,7 @@ const heroData = computed(() => heroes.value.filter((hero) => {
 const searchHistory = ref(new Set(JSON.parse(window.localStorage.getItem('searchHistory'))))
 
 const heroStats = computed(() => {
-    console.log("computing heroStats")
+    console.log("trigger: heroStats " + heroData.value.name)
     return {
         attack: heroStatService.getAttack(heroData.value, 60, 6),
         health: heroStatService.getHealth(heroData.value, 60, 6),
@@ -466,7 +466,7 @@ const showMore = (heroId) => {
     window.localStorage.setItem('searchHistory', JSON.stringify([...searchHistory.value]))
     if (heroId === selectedHero.value) return selectedHero.value = ""
     selectedHero.value = heroId
-    console.log("hero.id:", heroId)
+    console.log(`trigger: showMore(${heroId})`)
 }
 const removeSelectedHero = () => {
     selectedHero.value = ''
