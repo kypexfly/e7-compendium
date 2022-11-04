@@ -23,7 +23,7 @@
 
                 <!-- Search history -->
                 <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">
-                    Search history
+                    Search history (max 16)
                     <button @click="searchHistory.clear()"
                         class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
                         clean history
@@ -128,14 +128,14 @@
             </div>
 
             <!-- Table with heroes data -->
-            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4"
+            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-10"
                 :class="{ 'ml-auto mr-0': selectedHero }">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mx-auto">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-blue-600 dark:text-gray-200">
                         <tr>
                             <th scope="col" class="p-2.5 hidden sm:table-cell cursor-pointer" @click="sortTableBy('id')"
                                 :class="{ '!hidden md:!table-cell': selectedHero }">ID</th>
-                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('name')" >Name</th>
+                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('name')">Name</th>
                             <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('element')">Element</th>
                             <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('role')">Class</th>
                             <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('rarity')">Grade</th>
@@ -462,10 +462,19 @@ const heroStats = computed(() => {
 })
 
 const showMore = (heroId) => {
-    searchHistory.value.add(heroId)
-    window.localStorage.setItem('searchHistory', JSON.stringify([...searchHistory.value]))
     if (heroId === selectedHero.value) return selectedHero.value = ""
     selectedHero.value = heroId
+
+    if (searchHistory.value.size < 16) {
+        searchHistory.value.add(heroId)
+        window.localStorage.setItem('searchHistory', JSON.stringify([...searchHistory.value]))
+    } else {
+        if (searchHistory.value.has(heroId)) return
+        searchHistory.value.delete([...searchHistory.value][0])
+        searchHistory.value.add(heroId)
+        window.localStorage.setItem('searchHistory', JSON.stringify([...searchHistory.value]))
+    }
+
     console.log(`trigger: showMore(${heroId})`)
 }
 const removeSelectedHero = () => {

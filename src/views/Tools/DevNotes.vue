@@ -16,13 +16,19 @@
             <h2 class="text-2xl font-thin">About "Game Data" page</h2>
             <ul class="list-disc m-6">
                 <li>
-                    WIP. Might take time to figure out filtering and  make it mobile compatible.
+                    <strike>WIP. Might take time to figure out filtering and  make it mobile compatible.</strike>
                 </li>
                 <li>
                     <strike>Where is ATK, HP, DEF, SPD in hero-data.json?</strike> 
                 </li>
                 <li>
                     Might be better to put raw values of ATK, HP, DEF and SPD instead calculating because of browser performance.
+                </li>
+                <li>
+                    I suggest adding lazy load, it means when scrolling loads the needed data and make the page smoother. Just that I don't know how to 😢
+                </li>
+                <li>
+                    Sorting by clicking table header needs 
                 </li>
             </ul>
 
@@ -51,6 +57,8 @@ export default {
     }
 }
 </script>
-<style>
-
+<style scoped>
+strike {
+    @apply text-slate-600
+}
 </style>
