@@ -24,7 +24,7 @@
                 <!-- Search history -->
                 <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">
                     Search history (max 16)
-                    <button @click="searchHistory.clear()"
+                    <button @click="removeSearchHistory"
                         class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
                         clean history
                     </button>
@@ -265,27 +265,6 @@
 
                 <Tabs variant="underline" v-model="activeTab" class="p-5">
                     <!-- class appends to content DIV for all tabs -->
-                    <Tab name="stats" title="Stats">
-                        <h2 class="text-m uppercase font-bold">Lv. 60 + 6 ⭐ stats</h2>
-                        <ProgressBar label="Attack" :labelValue="heroStats.attack"
-                            :progress="Math.floor((heroStats.attack / 1435) * 50)" />
-                        <ProgressBar label="Health" :labelValue="heroStats.health"
-                            :progress="Math.floor((heroStats.health / 7323) * 50)" />
-                        <ProgressBar label="Defense" :labelValue="heroStats.defense"
-                            :progress="Math.floor((heroStats.defense / 776) * 50)" />
-                        <ProgressBar label="Speed" :labelValue="heroStats.speed"
-                            :progress="Math.floor((heroStats.speed / 129) * 25)" />
-                        <ProgressBar label="Crit. Change" :labelValue="heroStats.critChance + '%'"
-                            :progress="Math.floor((heroStats.critChance / 27) * 25)" />
-                        <ProgressBar label="Crit. Damage" :labelValue="heroStats.critDamage + '%'"
-                            :progress="Math.floor((heroStats.critDamage / 165) * 25)" />
-                        <ProgressBar label="Effectiveness" :labelValue="heroStats.effectiveness + '%'"
-                            :progress="Math.floor((heroStats.effectiveness / 30) * 25)" />
-                        <ProgressBar label="Effect Resistance" :labelValue="heroStats.resistance + '%'"
-                            :progress="Math.floor((heroStats.resistance / 30) * 25)" />
-                        <ProgressBar label="Dual Attack Chance" :labelValue="heroStats.dualAttack + '%'"
-                            :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
-                    </Tab>
                     <Tab name="information" title="Information">
                         <h2 class="text-m uppercase font-bold">{{ heroData.name }}'s story</h2>
                         <p>
@@ -298,7 +277,7 @@
                         <div class="flex gap-5 w-full py-4 items-center">
                             <img :src="heroData.mission_specialty_icon" class="w-[74px] h-[74px]" alt="">
                             <div>
-                                <h1 class="text-xl">{{ heroData.mission_specialty_name }}</h1>
+                                <h3 class="text-xl">{{ heroData.mission_specialty_name }}</h3>
 
                                 <p class="my-1 text-sm ">{{ heroData.mission_specialty_description }}</p>
                                 <span v-if="heroData.mission_attribute_name"
@@ -334,32 +313,118 @@
 
                         <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
 
+                        <h2 class="text-m uppercase font-bold">Memory Imprint</h2>
+
+                        <div class="flex justify-between gap-10">
+                            <div class="flex-1">
+                                <h3 class="text-xl mt-4">Imprint Release</h3>
+
+                                <ul class="space-y-1 list-disc list-inside mt-4">
+                                    <li v-for="level in ['d', 'c', 'b', 'a', 's', 'ss', 'sss']" :key="level"
+                                        class="flex justify-between">
+                                        <span>
+                                            <img :src="`https://assets.epicsevendb.com/_source/img/hero_dedi_a_${level}.png`"
+                                                class="w-[20px] inline-block align-middle" alt="" />
+                                            {{ heroData.self_imprint_stat }}
+                                        </span>
+                                        <span>{{ heroData['self_imprint_' + level.toUpperCase()] }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex-1">
+                                <h3 class="text-xl mt-4">Imprint Concentration</h3>
+
+                                <ul class="space-y-1 list-disc list-inside mt-4">
+                                    <li v-for="level in ['d', 'c', 'b', 'a', 's', 'ss', 'sss']" :key="level"
+                                        class="flex justify-between">
+                                        <span>
+                                            <img :src="`https://assets.epicsevendb.com/_source/img/hero_dedi_a_${level}.png`"
+                                                class="w-[20px] inline-block align-middle" alt="" />
+                                            {{ heroData.release_imprint_stat }}
+                                        </span>
+                                        <span>{{ heroData['release_imprint_' + level.toUpperCase()] }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+
                         <h2 class="text-m uppercase font-bold">Camping</h2>
                         <p>
-                            Data
+                            <span class="font-bold text-slate-300">Personalities:</span> {{
+                                    heroData.camping_Personality_1
+                            }}, {{ heroData.camping_Personality_2 }}
                         </p>
-
-                        <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
-
-                        <h2 class="text-m uppercase font-bold">Memory Imprint</h2>
                         <p>
-                            Data
+                            <span class="font-bold text-slate-300">Topics: </span> {{ heroData.camping_Topic_1 }}, {{
+                                    heroData.camping_Topic_2
+                            }}
                         </p>
 
-                        <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
+                        <ul class="list-inside text-sm mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <li v-for="morale in morales" :key="morale"
+                                class="flex flex-col justify-center items-center text-center bg-slate-800 rounded-md p-2">
+                                <span class="font-bold text-slate-300">
+                                    {{ morale }}
+                                </span>
+                                <span class="font-bold" :class="{
+                                    'text-red-600': heroData['camping_result_' + morale] < 0,
+                                    'text-lime-600': heroData['camping_result_' + morale] > 0
+                                }">
+                                    {{ heroData['camping_result_' + morale] }}
+                                </span>
+                            </li>
+                        </ul>
+                    </Tab>
+                    <Tab name="skills" title="Skills">
+                        <div class="flex flex-col gap-3">
+                            <div class="flex gap-5 w-full py-4 px-2 items-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+                                v-for="skill in [1, 2, 3]" :key="skill">
+                                <img :src="heroData[`Skill_${skill}_icon`]" class="w-[82px] h-[84px]" alt="">
+                                <div>
+                                    <h3 class="text-xl">{{ heroData[`Skill_${skill}_name`] }} </h3>
+                                    <span class="inline-block align-middle bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded 
+                                        dark:bg-gray-700 dark:text-gray-300">
+                                        +{{ heroData[`Skill_${skill}_soul_gain`] }} soul
+                                    </span>
+                                    <span class="inline-block align-middle bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded 
+                                        dark:bg-gray-700 dark:text-gray-300"
+                                        v-if="heroData[`Skill_${skill}_cooldown`]">
+                                        {{ heroData[`Skill_${skill}_cooldown`] }} turn cooldown
+                                    </span>
 
-                        <h2 class="text-m uppercase font-bold">Relationships</h2>
-                        <p>
-                            Data
-                        </p>
+                                    <p class="my-1 text-sm ">{{ heroData[`Skill_${skill}_description`] }}</p>
 
+                                </div>
+                            </div>
+                        </div>
+                    </Tab>
+                    <Tab name="stats" title="Stats">
+                        <h2 class="text-m uppercase font-bold">Lv. 60 + 6 ⭐ stats</h2>
+                        <ProgressBar label="Attack" :labelValue="heroStats.attack"
+                            :progress="Math.floor((heroStats.attack / 1435) * 50)" />
+                        <ProgressBar label="Health" :labelValue="heroStats.health"
+                            :progress="Math.floor((heroStats.health / 7323) * 50)" />
+                        <ProgressBar label="Defense" :labelValue="heroStats.defense"
+                            :progress="Math.floor((heroStats.defense / 776) * 50)" />
+                        <ProgressBar label="Speed" :labelValue="heroStats.speed"
+                            :progress="Math.floor((heroStats.speed / 129) * 25)" />
+                        <ProgressBar label="Crit. Change" :labelValue="heroStats.critChance + '%'"
+                            :progress="Math.floor((heroStats.critChance / 27) * 25)" />
+                        <ProgressBar label="Crit. Damage" :labelValue="heroStats.critDamage + '%'"
+                            :progress="Math.floor((heroStats.critDamage / 165) * 25)" />
+                        <ProgressBar label="Effectiveness" :labelValue="heroStats.effectiveness + '%'"
+                            :progress="Math.floor((heroStats.effectiveness / 30) * 25)" />
+                        <ProgressBar label="Effect Resistance" :labelValue="heroStats.resistance + '%'"
+                            :progress="Math.floor((heroStats.resistance / 30) * 25)" />
+                        <ProgressBar label="Dual Attack Chance" :labelValue="heroStats.dualAttack + '%'"
+                            :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
                     </Tab>
                     <Tab name="model-viewer" title="Model Viewer">
                         See model at <a :href="'https://www.e7vau.lt/portrait-viewer.html?id=' + heroData.id"
                             target="_blank" rel="noopener noreferrer">e7vau.lt</a>
-                    </Tab>
-                    <Tab name="skills" title="Skills">
-                        No hero data available
                     </Tab>
                     <Tab name="guides" title="Guides">
                         No hero data available
@@ -402,6 +467,10 @@ const selectedFilter = ref({
     elements: [],
     rarities: []
 })
+
+const morales = ['Criticism', 'Reality Check', 'Heroic Tale', 'Comforting Cheer', 'Cute Cheer', 'Heroic Cheer', 'Sad Memory', 'Joyful Memory',
+    'Happy Memory', 'Unique Comment', 'Self-Indulgent', 'Occult', 'Myth', 'Bizarre Story', 'Food Story', 'Horror Story', 'Gossip', 'Dream',
+    'Advice', 'Complain', 'Belief', 'Interesting Story']
 
 const searchTerm = ref('')
 const selectedHero = ref('')
@@ -481,6 +550,11 @@ const showMore = (heroId) => {
 const removeSelectedHero = () => {
     selectedHero.value = ''
     console.log("selectedHero removed")
+}
+const removeSearchHistory = () => {
+    searchHistory.value.clear()
+    window.localStorage.setItem('searchHistory', JSON.stringify([]))
+    console.log("SearchHistory removed")
 }
 
 </script>
