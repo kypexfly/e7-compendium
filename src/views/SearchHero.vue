@@ -182,29 +182,30 @@
                                 <img :src="`/assets/symbol/icon_class_${hero.role}.png`"
                                     class="inline-block align-middle mr-1" width=20 height=20 alt="">
                                 <small class="hidden xs:inline-block"
-                                    :class="{ '!hidden md:!inline-block': selectedHero }">{{ hero.role }}</small>
+                                    :class="{ '!hidden md:!inline-block': selectedHero }">
+                                    {{ hero.role }}
+                                </small>
                             </td>
                             <td class="px-1">
                                 <img :src="`/assets/symbol/${hero.rarity}-star.png`" style="height:15px" alt="">
                             </td>
                             <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                ????
+                                <small>{{ hero.attack }}</small>
                             </td>
                             <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                ????
+                                <small>{{ hero.health }}</small>
                             </td>
                             <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                ????
+                                <small>{{ hero.defense }}</small>
                             </td>
                             <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                ????
+                                <small>{{ hero.speed }}</small>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <p v-if="!filteredHeroes.length" class="text-sm text-center text-gray-500 dark:text-gray-400">No results
-                    for
-                    "{{ searchTerm }}"</p>
+                <p v-if="!filteredHeroes.length" class="text-sm text-center text-gray-500 dark:text-gray-400">
+                    No results for "{{ searchTerm }}"</p>
             </div>
         </section>
 
@@ -219,7 +220,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
                         </path>
                     </svg>
-                    go back
+                    back
                     <span class="sr-only">Close modal</span>
                 </button>
 

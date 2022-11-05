@@ -155,7 +155,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1017_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1017_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1017_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1017_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1017_l.png",
+    "attack": 603,
+    "health": 4945,
+    "defense": 662,
+    "speed": 101
   },
   {
     "id": "c3043",
@@ -316,7 +320,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0010_w.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3043_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3043_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3043_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3043_l.png",
+    "attack": 966,
+    "health": 3925,
+    "defense": 606,
+    "speed": 110
   },
   {
     "id": "c5001",
@@ -475,7 +483,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c5001_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c5001_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c5001_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c5001_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c5001_l.png",
+    "attack": 758,
+    "health": 5827,
+    "defense": 617,
+    "speed": 95
   },
   {
     "id": "c3093",
@@ -604,7 +616,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c3093_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3093_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3093_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3093_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3093_l.png",
+    "attack": 951,
+    "health": 5518,
+    "defense": 583,
+    "speed": 104
   },
   {
     "id": "c1018",
@@ -764,7 +780,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1018_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1018_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1018_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1018_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1018_l.png",
+    "attack": 706,
+    "health": 4248,
+    "defense": 672,
+    "speed": 92
   },
   {
     "id": "c1100",
@@ -922,7 +942,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1100_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1100_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1100_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1100_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1100_l.png",
+    "attack": 975,
+    "health": 7054,
+    "defense": 653,
+    "speed": 106
   },
   {
     "id": "c3012",
@@ -1079,7 +1103,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0020_i.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3012_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3012_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3012_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3012_l.png",
+    "attack": 1081,
+    "health": 4572,
+    "defense": 494,
+    "speed": 111
   },
   {
     "id": "c4065",
@@ -1238,7 +1266,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4065_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4065_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4065_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4065_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4065_l.png",
+    "attack": 1005,
+    "health": 4693,
+    "defense": 532,
+    "speed": 109
   },
   {
     "id": "c2042",
@@ -1397,7 +1429,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2042_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2042_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2042_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2042_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2042_l.png",
+    "attack": 894,
+    "health": 6840,
+    "defense": 695,
+    "speed": 104
   },
   {
     "id": "c4042",
@@ -1557,7 +1593,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4042_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4042_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4042_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4042_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4042_l.png",
+    "attack": 540,
+    "health": 4531,
+    "defense": 691,
+    "speed": 94
   },
   {
     "id": "c1062",
@@ -1715,7 +1755,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1062_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1062_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1062_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1062_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1062_l.png",
+    "attack": 576,
+    "health": 5701,
+    "defense": 743,
+    "speed": 88
   },
   {
     "id": "c2019",
@@ -1869,7 +1913,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2019_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2019_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2019_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2019_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2019_l.png",
+    "attack": 975,
+    "health": 7054,
+    "defense": 653,
+    "speed": 106
   },
   {
     "id": "c1048",
@@ -2028,7 +2076,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1048_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1048_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1048_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1048_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1048_l.png",
+    "attack": 1198,
+    "health": 4572,
+    "defense": 683,
+    "speed": 106
   },
   {
     "id": "c2007",
@@ -2184,7 +2236,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2007_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2007_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2007_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2007_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2007_l.png",
+    "attack": 1285,
+    "health": 5138,
+    "defense": 522,
+    "speed": 116
   },
   {
     "id": "c3023",
@@ -2344,7 +2400,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0027_w.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3023_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3023_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3023_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3023_l.png",
+    "attack": 1000,
+    "health": 4895,
+    "defense": 518,
+    "speed": 114
   },
   {
     "id": "c4023",
@@ -2504,7 +2564,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4023_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4023_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4023_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4023_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4023_l.png",
+    "attack": 1000,
+    "health": 4895,
+    "defense": 518,
+    "speed": 114
   },
   {
     "id": "c1008",
@@ -2671,7 +2735,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1008_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1008_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1008_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1008_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1008_l.png",
+    "attack": 721,
+    "health": 6189,
+    "defense": 786,
+    "speed": 91
   },
   {
     "id": "c3004",
@@ -2833,7 +2901,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0012_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3004_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3004_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3004_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3004_l.png",
+    "attack": 758,
+    "health": 5827,
+    "defense": 617,
+    "speed": 95
   },
   {
     "id": "c2013",
@@ -2990,7 +3062,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2013_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2013_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2013_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2013_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2013_l.png",
+    "attack": 1119,
+    "health": 6091,
+    "defense": 594,
+    "speed": 100
   },
   {
     "id": "c2014",
@@ -3152,7 +3228,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2014_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2014_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2014_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2014_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2014_l.png",
+    "attack": 930,
+    "health": 4774,
+    "defense": 497,
+    "speed": 128
   },
   {
     "id": "c2033",
@@ -3311,7 +3391,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2033_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2033_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2033_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2033_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2033_l.png",
+    "attack": 1028,
+    "health": 5299,
+    "defense": 469,
+    "speed": 126
   },
   {
     "id": "c2031",
@@ -3469,7 +3553,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2031_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2031_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2031_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2031_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2031_l.png",
+    "attack": 1021,
+    "health": 4855,
+    "defense": 610,
+    "speed": 106
   },
   {
     "id": "c3031",
@@ -3628,7 +3716,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0017_f.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3031_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3031_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3031_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3031_l.png",
+    "attack": 1020,
+    "health": 5739,
+    "defense": 572,
+    "speed": 98
   },
   {
     "id": "c1015",
@@ -3786,7 +3878,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1015_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1015_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1015_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1015_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1015_l.png",
+    "attack": 1198,
+    "health": 4572,
+    "defense": 683,
+    "speed": 106
   },
   {
     "id": "c1093",
@@ -3947,7 +4043,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1093_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1093_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1093_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1093_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1093_l.png",
+    "attack": 1228,
+    "health": 6267,
+    "defense": 473,
+    "speed": 113
   },
   {
     "id": "c1053",
@@ -4106,7 +4206,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1053_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1053_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1053_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1053_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1053_l.png",
+    "attack": 1220,
+    "health": 4778,
+    "defense": 715,
+    "speed": 108
   },
   {
     "id": "c3006",
@@ -4267,7 +4371,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c3006_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3006_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3006_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3006_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3006_l.png",
+    "attack": 842,
+    "health": 6413,
+    "defense": 617,
+    "speed": 90
   },
   {
     "id": "c3095",
@@ -4428,7 +4536,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c3095_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3095_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3095_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3095_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3095_l.png",
+    "attack": 1040,
+    "health": 5097,
+    "defense": 518,
+    "speed": 104
   },
   {
     "id": "c1071",
@@ -4584,7 +4696,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1071_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1071_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1071_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1071_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1071_l.png",
+    "attack": 1003,
+    "health": 5704,
+    "defense": 585,
+    "speed": 115
   },
   {
     "id": "c2043",
@@ -4743,7 +4859,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2043_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2043_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2043_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2043_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2043_l.png",
+    "attack": 957,
+    "health": 5016,
+    "defense": 645,
+    "speed": 112
   },
   {
     "id": "c1074",
@@ -4900,7 +5020,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1074_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1074_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1074_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1074_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1074_l.png",
+    "attack": 1228,
+    "health": 6267,
+    "defense": 473,
+    "speed": 113
   },
   {
     "id": "c1085",
@@ -5061,7 +5185,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1085_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1085_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1085_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1085_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1085_l.png",
+    "attack": 1119,
+    "health": 6091,
+    "defense": 594,
+    "speed": 100
   },
   {
     "id": "c2021",
@@ -5217,7 +5345,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2021_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2021_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2021_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2021_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2021_l.png",
+    "attack": 859,
+    "health": 4167,
+    "defense": 627,
+    "speed": 106
   },
   {
     "id": "c1079",
@@ -5376,7 +5508,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1079_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1079_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1079_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1079_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1079_l.png",
+    "attack": 1360,
+    "health": 5542,
+    "defense": 585,
+    "speed": 105
   },
   {
     "id": "c1087",
@@ -5538,7 +5674,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1087_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1087_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1087_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1087_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1087_l.png",
+    "attack": 1069,
+    "health": 5650,
+    "defense": 536,
+    "speed": 110
   },
   {
     "id": "c2011",
@@ -5694,7 +5834,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2011_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2011_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2011_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2011_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2011_l.png",
+    "attack": 1139,
+    "health": 5871,
+    "defense": 462,
+    "speed": 111
   },
   {
     "id": "c2039",
@@ -5850,7 +5994,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2039_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2039_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2039_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2039_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2039_l.png",
+    "attack": 621,
+    "health": 5057,
+    "defense": 756,
+    "speed": 98
   },
   {
     "id": "c2024",
@@ -6008,7 +6156,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2024_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2024_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2024_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2024_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2024_l.png",
+    "attack": 1183,
+    "health": 5299,
+    "defense": 571,
+    "speed": 114
   },
   {
     "id": "c3001",
@@ -6167,7 +6319,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0012_f.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3001_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3001_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3001_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3001_l.png",
+    "attack": 984,
+    "health": 5138,
+    "defense": 606,
+    "speed": 95
   },
   {
     "id": "c4034",
@@ -6327,7 +6483,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4034_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4034_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4034_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4034_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4034_l.png",
+    "attack": 951,
+    "health": 5518,
+    "defense": 583,
+    "speed": 104
   },
   {
     "id": "c3071",
@@ -6480,7 +6640,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0024_f.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3071_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3071_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3071_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3071_l.png",
+    "attack": 1084,
+    "health": 3878,
+    "defense": 666,
+    "speed": 101
   },
   {
     "id": "c3051",
@@ -6643,7 +6807,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0024_f.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3051_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3051_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3051_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3051_l.png",
+    "attack": 966,
+    "health": 3925,
+    "defense": 606,
+    "speed": 110
   },
   {
     "id": "c1013",
@@ -6804,7 +6972,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1013_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1013_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1013_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1013_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1013_l.png",
+    "attack": 903,
+    "health": 6636,
+    "defense": 630,
+    "speed": 103
   },
   {
     "id": "c1002",
@@ -6964,7 +7136,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1002_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1002_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1002_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1002_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1002_l.png",
+    "attack": 821,
+    "health": 6752,
+    "defense": 648,
+    "speed": 110
   },
   {
     "id": "c3064",
@@ -7123,7 +7299,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0020_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3064_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3064_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3064_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3064_l.png",
+    "attack": 929,
+    "health": 4733,
+    "defense": 494,
+    "speed": 128
   },
   {
     "id": "c2005",
@@ -7279,7 +7459,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2005_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2005_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2005_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2005_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2005_l.png",
+    "attack": 1102,
+    "health": 4491,
+    "defense": 627,
+    "speed": 101
   },
   {
     "id": "c1103",
@@ -7433,7 +7617,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1103_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1103_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1103_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1103_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1103_l.png",
+    "attack": 1228,
+    "health": 6267,
+    "defense": 473,
+    "speed": 113
   },
   {
     "id": "c1081",
@@ -7591,7 +7779,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1081_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1081_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1081_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1081_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1081_l.png",
+    "attack": 971,
+    "health": 5299,
+    "defense": 603,
+    "speed": 122
   },
   {
     "id": "c2037",
@@ -7749,7 +7941,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2037_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2037_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2037_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2037_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2037_l.png",
+    "attack": 1102,
+    "health": 4491,
+    "defense": 627,
+    "speed": 101
   },
   {
     "id": "c2010",
@@ -7908,7 +8104,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2010_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2010_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2010_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2010_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2010_l.png",
+    "attack": 1160,
+    "health": 4733,
+    "defense": 627,
+    "speed": 104
   },
   {
     "id": "c4001",
@@ -8067,7 +8267,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4001_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4001_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4001_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4001_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4001_l.png",
+    "attack": 984,
+    "health": 5138,
+    "defense": 606,
+    "speed": 95
   },
   {
     "id": "c4025",
@@ -8226,7 +8430,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4025_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4025_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4025_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4025_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4025_l.png",
+    "attack": 1145,
+    "health": 4895,
+    "defense": 543,
+    "speed": 101
   },
   {
     "id": "c1027",
@@ -8381,7 +8589,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1027_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1027_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1027_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1027_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1027_l.png",
+    "attack": 958,
+    "health": 6148,
+    "defense": 634,
+    "speed": 109
   },
   {
     "id": "c1009",
@@ -8539,7 +8751,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1009_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1009_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1009_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1009_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1009_l.png",
+    "attack": 1160,
+    "health": 5825,
+    "defense": 662,
+    "speed": 99
   },
   {
     "id": "c1049",
@@ -8695,7 +8911,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1049_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1049_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1049_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1049_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1049_l.png",
+    "attack": 1178,
+    "health": 5542,
+    "defense": 553,
+    "speed": 119
   },
   {
     "id": "c3025",
@@ -8854,7 +9074,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0017_d.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3025_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3025_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3025_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3025_l.png",
+    "attack": 1145,
+    "health": 4895,
+    "defense": 543,
+    "speed": 101
   },
   {
     "id": "c1014",
@@ -9012,7 +9236,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1014_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1014_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1014_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1014_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1014_l.png",
+    "attack": 1030,
+    "health": 5097,
+    "defense": 473,
+    "speed": 126
   },
   {
     "id": "c1028",
@@ -9172,7 +9400,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1028_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1028_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1028_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1028_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1028_l.png",
+    "attack": 1252,
+    "health": 5219,
+    "defense": 564,
+    "speed": 103
   },
   {
     "id": "c1033",
@@ -9331,7 +9563,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1033_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1033_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1033_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1033_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1033_l.png",
+    "attack": 1139,
+    "health": 5871,
+    "defense": 462,
+    "speed": 111
   },
   {
     "id": "c4035",
@@ -9490,7 +9726,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4035_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4035_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4035_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4035_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4035_l.png",
+    "attack": 1145,
+    "health": 4895,
+    "defense": 543,
+    "speed": 101
   },
   {
     "id": "c1012",
@@ -9655,7 +9895,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1012_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1012_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1012_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1012_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1012_l.png",
+    "attack": 903,
+    "health": 6636,
+    "defense": 630,
+    "speed": 103
   },
   {
     "id": "c2054",
@@ -9814,7 +10058,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2054_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2054_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2054_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2054_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2054_l.png",
+    "attack": 1028,
+    "health": 5299,
+    "defense": 469,
+    "speed": 126
   },
   {
     "id": "c2008",
@@ -9974,7 +10222,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2008_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2008_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2008_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2008_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2008_l.png",
+    "attack": 821,
+    "health": 6267,
+    "defense": 645,
+    "speed": 97
   },
   {
     "id": "c1036",
@@ -10134,7 +10386,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1036_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1036_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1036_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1036_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1036_l.png",
+    "attack": 739,
+    "health": 6868,
+    "defense": 733,
+    "speed": 93
   },
   {
     "id": "c2012",
@@ -10290,7 +10546,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2012_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2012_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2012_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2012_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2012_l.png",
+    "attack": 966,
+    "health": 6270,
+    "defense": 657,
+    "speed": 102
   },
   {
     "id": "c2028",
@@ -10456,7 +10716,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2028_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2028_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2028_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2028_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2028_l.png",
+    "attack": 957,
+    "health": 5057,
+    "defense": 592,
+    "speed": 112
   },
   {
     "id": "c2049",
@@ -10616,7 +10880,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2049_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2049_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2049_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2049_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2049_l.png",
+    "attack": 640,
+    "health": 5298,
+    "defense": 680,
+    "speed": 104
   },
   {
     "id": "c2053",
@@ -10773,7 +11041,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2053_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2053_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2053_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2053_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2053_l.png",
+    "attack": 932,
+    "health": 4370,
+    "defense": 652,
+    "speed": 108
   },
   {
     "id": "c2022",
@@ -10927,7 +11199,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2022_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2022_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2022_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2022_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2022_l.png",
+    "attack": 621,
+    "health": 6035,
+    "defense": 776,
+    "speed": 89
   },
   {
     "id": "c1021",
@@ -11090,7 +11366,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1021_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1021_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1021_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1021_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1021_l.png",
+    "attack": 957,
+    "health": 5057,
+    "defense": 592,
+    "speed": 112
   },
   {
     "id": "c1094",
@@ -11245,7 +11525,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1094_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1094_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1094_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1094_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1094_l.png",
+    "attack": 1039,
+    "health": 5299,
+    "defense": 673,
+    "speed": 115
   },
   {
     "id": "c1037",
@@ -11403,7 +11687,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1037_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1037_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1037_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1037_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1037_l.png",
+    "attack": 957,
+    "health": 5016,
+    "defense": 645,
+    "speed": 112
   },
   {
     "id": "c3044",
@@ -11563,7 +11851,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0020_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3044_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3044_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3044_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3044_l.png",
+    "attack": 540,
+    "health": 5319,
+    "defense": 706,
+    "speed": 86
   },
   {
     "id": "c3094",
@@ -11723,7 +12015,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c3094_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3094_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3094_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3094_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3094_l.png",
+    "attack": 685,
+    "health": 6403,
+    "defense": 703,
+    "speed": 91
   },
   {
     "id": "c1091",
@@ -11879,7 +12175,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1091_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1091_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1091_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1091_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1091_l.png",
+    "attack": 649,
+    "health": 5254,
+    "defense": 694,
+    "speed": 103
   },
   {
     "id": "c1105",
@@ -12039,7 +12339,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1105_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1105_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1105_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1105_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1105_l.png",
+    "attack": 1003,
+    "health": 5704,
+    "defense": 585,
+    "speed": 115
   },
   {
     "id": "c3054",
@@ -12198,7 +12502,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0027_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3054_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3054_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3054_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3054_l.png",
+    "attack": 540,
+    "health": 4531,
+    "defense": 691,
+    "speed": 94
   },
   {
     "id": "c3022",
@@ -12358,7 +12666,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0017_i.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3022_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3022_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3022_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3022_l.png",
+    "attack": 1020,
+    "health": 5739,
+    "defense": 572,
+    "speed": 98
   },
   {
     "id": "c2046",
@@ -12515,7 +12827,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2046_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2046_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2046_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2046_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2046_l.png",
+    "attack": 1183,
+    "health": 5299,
+    "defense": 571,
+    "speed": 114
   },
   {
     "id": "c4003",
@@ -12679,7 +12995,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4003_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4003_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4003_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4003_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4003_l.png",
+    "attack": 703,
+    "health": 5915,
+    "defense": 596,
+    "speed": 105
   },
   {
     "id": "c2002",
@@ -12836,7 +13156,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2002_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2002_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2002_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2002_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2002_l.png",
+    "attack": 894,
+    "health": 6840,
+    "defense": 695,
+    "speed": 104
   },
   {
     "id": "c2032",
@@ -12995,7 +13319,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2032_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2032_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2032_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2032_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2032_l.png",
+    "attack": 821,
+    "health": 6267,
+    "defense": 645,
+    "speed": 97
   },
   {
     "id": "c3026",
@@ -13151,7 +13479,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c3026_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3026_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3026_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3026_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3026_l.png",
+    "attack": 957,
+    "health": 5057,
+    "defense": 592,
+    "speed": 112
   },
   {
     "id": "c1076",
@@ -13313,7 +13645,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1076_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1076_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1076_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1076_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1076_l.png",
+    "attack": 649,
+    "health": 5254,
+    "defense": 694,
+    "speed": 103
   },
   {
     "id": "c2035",
@@ -13472,7 +13808,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2035_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2035_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2035_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2035_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2035_l.png",
+    "attack": 903,
+    "health": 6636,
+    "defense": 630,
+    "speed": 103
   },
   {
     "id": "c3074",
@@ -13635,7 +13975,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0010_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3074_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3074_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3074_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3074_l.png",
+    "attack": 1199,
+    "health": 4491,
+    "defense": 613,
+    "speed": 107
   },
   {
     "id": "c2018",
@@ -13794,7 +14138,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2018_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2018_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2018_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2018_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2018_l.png",
+    "attack": 1252,
+    "health": 4612,
+    "defense": 627,
+    "speed": 107
   },
   {
     "id": "c3024",
@@ -13955,7 +14303,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0014_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3024_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3024_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3024_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3024_l.png",
+    "attack": 951,
+    "health": 5518,
+    "defense": 583,
+    "speed": 104
   },
   {
     "id": "c1039",
@@ -14113,7 +14465,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1039_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1039_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1039_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1039_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1039_l.png",
+    "attack": 1089,
+    "health": 5380,
+    "defense": 511,
+    "speed": 120
   },
   {
     "id": "c3041",
@@ -14271,7 +14627,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0027_f.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3041_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3041_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3041_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3041_l.png",
+    "attack": 763,
+    "health": 4417,
+    "defense": 661,
+    "speed": 91
   },
   {
     "id": "c5016",
@@ -14428,7 +14788,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c5016_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c5016_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c5016_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c5016_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c5016_l.png",
+    "attack": 1119,
+    "health": 6267,
+    "defense": 628,
+    "speed": 109
   },
   {
     "id": "c2062",
@@ -14593,7 +14957,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2062_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2062_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2062_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2062_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2062_l.png",
+    "attack": 649,
+    "health": 4248,
+    "defense": 631,
+    "speed": 102
   },
   {
     "id": "c3055",
@@ -14751,7 +15119,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0024_d.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3055_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3055_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3055_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3055_l.png",
+    "attack": 930,
+    "health": 4572,
+    "defense": 585,
+    "speed": 105
   },
   {
     "id": "c1024",
@@ -14910,7 +15282,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1024_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1024_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1024_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1024_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1024_l.png",
+    "attack": 1158,
+    "health": 6003,
+    "defense": 553,
+    "speed": 112
   },
   {
     "id": "c3053",
@@ -15071,7 +15447,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0024_w.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3053_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3053_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3053_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3053_l.png",
+    "attack": 797,
+    "health": 3925,
+    "defense": 599,
+    "speed": 104
   },
   {
     "id": "c3052",
@@ -15230,7 +15610,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0024_i.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3052_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3052_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3052_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3052_l.png",
+    "attack": 1063,
+    "health": 4491,
+    "defense": 599,
+    "speed": 101
   },
   {
     "id": "c2006",
@@ -15386,7 +15770,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1006_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2006_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2006_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2006_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2006_l.png",
+    "attack": 1039,
+    "health": 5340,
+    "defense": 617,
+    "speed": 115
   },
   {
     "id": "c3011",
@@ -15546,7 +15934,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0016_f.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3011_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3011_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3011_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3011_l.png",
+    "attack": 848,
+    "health": 4289,
+    "defense": 494,
+    "speed": 113
   },
   {
     "id": "c1011",
@@ -15703,7 +16095,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1011_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1011_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1011_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1011_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1011_l.png",
+    "attack": 1188,
+    "health": 4855,
+    "defense": 508,
+    "speed": 113
   },
   {
     "id": "c1073",
@@ -15862,7 +16258,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1073_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1073_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1073_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1073_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1073_l.png",
+    "attack": 1307,
+    "health": 4248,
+    "defense": 652,
+    "speed": 119
   },
   {
     "id": "c1023",
@@ -16020,7 +16420,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1023_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1023_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1023_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1023_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1023_l.png",
+    "attack": 1119,
+    "health": 5340,
+    "defense": 483,
+    "speed": 129
   },
   {
     "id": "c1047",
@@ -16180,7 +16584,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1047_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1047_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1047_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1047_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1047_l.png",
+    "attack": 966,
+    "health": 6270,
+    "defense": 657,
+    "speed": 102
   },
   {
     "id": "c1086",
@@ -16339,7 +16747,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1086_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1086_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1086_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1086_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1086_l.png",
+    "attack": 957,
+    "health": 4653,
+    "defense": 515,
+    "speed": 119
   },
   {
     "id": "c3084",
@@ -16467,7 +16879,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0024_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3084_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3084_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3084_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3084_l.png",
+    "attack": 667,
+    "health": 5704,
+    "defense": 749,
+    "speed": 90
   },
   {
     "id": "c1006",
@@ -16623,7 +17039,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2006_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1006_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1006_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1006_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1006_l.png",
+    "attack": 1285,
+    "health": 5138,
+    "defense": 522,
+    "speed": 116
   },
   {
     "id": "c1107",
@@ -16782,7 +17202,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1107_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1107_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1107_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1107_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1107_l.png",
+    "attack": 576,
+    "health": 5701,
+    "defense": 743,
+    "speed": 88
   },
   {
     "id": "c3003",
@@ -16946,7 +17370,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0012_w.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3003_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3003_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3003_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3003_l.png",
+    "attack": 703,
+    "health": 5915,
+    "defense": 596,
+    "speed": 105
   },
   {
     "id": "c1070",
@@ -17107,7 +17535,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1070_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1070_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1070_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1070_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1070_l.png",
+    "attack": 839,
+    "health": 6067,
+    "defense": 752,
+    "speed": 100
   },
   {
     "id": "c3092",
@@ -17266,7 +17698,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c3092_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3092_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3092_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3092_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3092_l.png",
+    "attack": 951,
+    "health": 5518,
+    "defense": 583,
+    "speed": 104
   },
   {
     "id": "c1029",
@@ -17426,7 +17862,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1029_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1029_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1029_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1029_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1029_l.png",
+    "attack": 930,
+    "health": 5380,
+    "defense": 564,
+    "speed": 112
   },
   {
     "id": "c1046",
@@ -17583,7 +18023,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1046_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1046_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1046_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1046_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1046_l.png",
+    "attack": 1285,
+    "health": 4976,
+    "defense": 536,
+    "speed": 124
   },
   {
     "id": "c1089",
@@ -17740,7 +18184,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1089_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1089_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1089_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1089_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1089_l.png",
+    "attack": 821,
+    "health": 6752,
+    "defense": 648,
+    "speed": 110
   },
   {
     "id": "c1095",
@@ -17899,7 +18347,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1095_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1095_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1095_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1095_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1095_l.png",
+    "attack": 1119,
+    "health": 6267,
+    "defense": 628,
+    "speed": 109
   },
   {
     "id": "c2009",
@@ -18055,7 +18507,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2009_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2009_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2009_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2009_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2009_l.png",
+    "attack": 1119,
+    "health": 6267,
+    "defense": 628,
+    "speed": 109
   },
   {
     "id": "c3035",
@@ -18213,7 +18669,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0006_d.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3035_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3035_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3035_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3035_l.png",
+    "attack": 1145,
+    "health": 4895,
+    "defense": 543,
+    "speed": 101
   },
   {
     "id": "c1031",
@@ -18373,7 +18833,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1031_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1031_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1031_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1031_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1031_l.png",
+    "attack": 603,
+    "health": 4945,
+    "defense": 662,
+    "speed": 101
   },
   {
     "id": "c1069",
@@ -18532,7 +18996,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1069_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1069_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1069_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1069_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1069_l.png",
+    "attack": 1412,
+    "health": 4248,
+    "defense": 645,
+    "speed": 114
   },
   {
     "id": "c1082",
@@ -18689,7 +19157,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1082_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1082_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1082_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1082_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1082_l.png",
+    "attack": 1220,
+    "health": 4778,
+    "defense": 715,
+    "speed": 108
   },
   {
     "id": "c1066",
@@ -18843,7 +19315,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1066_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1066_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1066_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1066_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1066_l.png",
+    "attack": 1119,
+    "health": 6267,
+    "defense": 628,
+    "speed": 109
   },
   {
     "id": "c2047",
@@ -19001,7 +19477,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2047_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2047_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2047_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2047_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2047_l.png",
+    "attack": 1360,
+    "health": 5542,
+    "defense": 585,
+    "speed": 105
   },
   {
     "id": "c4041",
@@ -19159,7 +19639,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4041_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4041_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4041_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4041_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4041_l.png",
+    "attack": 763,
+    "health": 4417,
+    "defense": 661,
+    "speed": 91
   },
   {
     "id": "c1032",
@@ -19324,7 +19808,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1032_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1032_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1032_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1032_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1032_l.png",
+    "attack": 821,
+    "health": 6796,
+    "defense": 648,
+    "speed": 112
   },
   {
     "id": "c1096",
@@ -19482,7 +19970,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1096_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1096_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1096_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1096_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1096_l.png",
+    "attack": 1412,
+    "health": 4248,
+    "defense": 645,
+    "speed": 114
   },
   {
     "id": "c1005",
@@ -19637,7 +20129,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1005_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1005_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1005_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1005_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1005_l.png",
+    "attack": 1102,
+    "health": 4491,
+    "defense": 627,
+    "speed": 101
   },
   {
     "id": "c1088",
@@ -19796,7 +20292,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1088_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1088_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1088_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1088_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1088_l.png",
+    "attack": 1139,
+    "health": 4370,
+    "defense": 662,
+    "speed": 115
   },
   {
     "id": "c3014",
@@ -19958,7 +20458,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0016_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3014_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3014_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3014_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3014_l.png",
+    "attack": 885,
+    "health": 4410,
+    "defense": 501,
+    "speed": 116
   },
   {
     "id": "c3072",
@@ -20118,7 +20622,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0024_i.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3072_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3072_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3072_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3072_l.png",
+    "attack": 1245,
+    "health": 3925,
+    "defense": 606,
+    "speed": 111
   },
   {
     "id": "c3042",
@@ -20278,7 +20786,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0020_i.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3042_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3042_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3042_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3042_l.png",
+    "attack": 540,
+    "health": 4531,
+    "defense": 691,
+    "speed": 94
   },
   {
     "id": "c3033",
@@ -20441,7 +20953,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0006_w.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3033_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3033_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3033_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3033_l.png",
+    "attack": 1000,
+    "health": 4895,
+    "defense": 518,
+    "speed": 114
   },
   {
     "id": "c1044",
@@ -20599,7 +21115,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1044_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1044_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1044_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1044_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1044_l.png",
+    "attack": 1039,
+    "health": 5340,
+    "defense": 617,
+    "speed": 115
   },
   {
     "id": "c3061",
@@ -20757,7 +21277,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0027_f.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3061_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3061_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3061_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3061_l.png",
+    "attack": 921,
+    "health": 4855,
+    "defense": 525,
+    "speed": 110
   },
   {
     "id": "c3045",
@@ -20917,7 +21441,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0010_d.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3045_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3045_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3045_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3045_l.png",
+    "attack": 885,
+    "health": 4693,
+    "defense": 617,
+    "speed": 110
   },
   {
     "id": "c1080",
@@ -21073,7 +21601,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1080_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1080_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1080_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1080_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1080_l.png",
+    "attack": 1285,
+    "health": 4976,
+    "defense": 536,
+    "speed": 124
   },
   {
     "id": "c3073",
@@ -21235,7 +21767,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0010_w.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3073_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3073_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3073_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3073_l.png",
+    "attack": 921,
+    "health": 4855,
+    "defense": 631,
+    "speed": 112
   },
   {
     "id": "c1035",
@@ -21395,7 +21931,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1035_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1035_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1035_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1035_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1035_l.png",
+    "attack": 1119,
+    "health": 6091,
+    "defense": 594,
+    "speed": 100
   },
   {
     "id": "c3005",
@@ -21556,7 +22096,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0012_d.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3005_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3005_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3005_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3005_l.png",
+    "attack": 685,
+    "health": 6403,
+    "defense": 703,
+    "speed": 91
   },
   {
     "id": "c1001",
@@ -21715,7 +22259,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1001_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1001_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1001_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1001_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1001_l.png",
+    "attack": 758,
+    "health": 5827,
+    "defense": 617,
+    "speed": 95
   },
   {
     "id": "c1019",
@@ -21871,7 +22419,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1019_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1019_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1019_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1019_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1019_l.png",
+    "attack": 966,
+    "health": 6270,
+    "defense": 657,
+    "speed": 102
   },
   {
     "id": "c1090",
@@ -22027,7 +22579,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1090_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1090_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1090_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1090_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1090_l.png",
+    "attack": 694,
+    "health": 4450,
+    "defense": 655,
+    "speed": 104
   },
   {
     "id": "c2074",
@@ -22186,7 +22742,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2074_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2074_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2074_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2074_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2074_l.png",
+    "attack": 1285,
+    "health": 5138,
+    "defense": 522,
+    "speed": 116
   },
   {
     "id": "c3075",
@@ -22348,7 +22908,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0010_d.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3075_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3075_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3075_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3075_l.png",
+    "attack": 828,
+    "health": 4046,
+    "defense": 613,
+    "speed": 106
   },
   {
     "id": "c4051",
@@ -22511,7 +23075,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4051_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4051_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4051_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4051_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4051_l.png",
+    "attack": 966,
+    "health": 3925,
+    "defense": 606,
+    "speed": 110
   },
   {
     "id": "c4013",
@@ -22671,7 +23239,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c4013_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c4013_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c4013_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4013_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c4013_l.png",
+    "attack": 812,
+    "health": 4370,
+    "defense": 462,
+    "speed": 106
   },
   {
     "id": "c3034",
@@ -22830,7 +23402,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0006_l.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3034_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3034_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3034_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3034_l.png",
+    "attack": 951,
+    "health": 5518,
+    "defense": 583,
+    "speed": 104
   },
   {
     "id": "c3062",
@@ -22989,7 +23565,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0023_i.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3062_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3062_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3062_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3062_l.png",
+    "attack": 822,
+    "health": 4693,
+    "defense": 561,
+    "speed": 117
   },
   {
     "id": "c1054",
@@ -23150,7 +23730,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1054_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1054_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1054_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1054_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1054_l.png",
+    "attack": 594,
+    "health": 4989,
+    "defense": 652,
+    "speed": 102
   },
   {
     "id": "c2029",
@@ -23310,7 +23894,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2029_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2029_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2029_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2029_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2029_l.png",
+    "attack": 1089,
+    "health": 5016,
+    "defense": 553,
+    "speed": 111
   },
   {
     "id": "c1102",
@@ -23471,7 +24059,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1102_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1102_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1102_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1102_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1102_l.png",
+    "attack": 621,
+    "health": 5057,
+    "defense": 756,
+    "speed": 98
   },
   {
     "id": "c1043",
@@ -23629,7 +24221,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1043_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1043_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1043_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1043_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1043_l.png",
+    "attack": 1109,
+    "health": 4329,
+    "defense": 655,
+    "speed": 105
   },
   {
     "id": "c3013",
@@ -23790,7 +24386,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0027_w.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3013_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3013_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3013_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3013_l.png",
+    "attack": 812,
+    "health": 4370,
+    "defense": 462,
+    "speed": 106
   },
   {
     "id": "c1003",
@@ -23952,7 +24552,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1003_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1003_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1003_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1003_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1003_l.png",
+    "attack": 821,
+    "health": 6267,
+    "defense": 645,
+    "speed": 97
   },
   {
     "id": "c1022",
@@ -24110,7 +24714,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1022_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1022_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1022_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1022_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1022_l.png",
+    "attack": 621,
+    "health": 5057,
+    "defense": 756,
+    "speed": 98
   },
   {
     "id": "c2015",
@@ -24268,7 +24876,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2015_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2015_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2015_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2015_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2015_l.png",
+    "attack": 1039,
+    "health": 5299,
+    "defense": 673,
+    "speed": 115
   },
   {
     "id": "c1020",
@@ -24427,7 +25039,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1020_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1020_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1020_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1020_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1020_l.png",
+    "attack": 1069,
+    "health": 5650,
+    "defense": 536,
+    "speed": 110
   },
   {
     "id": "c5071",
@@ -24585,7 +25201,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c5071_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c5071_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c5071_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c5071_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c5071_l.png",
+    "attack": 1183,
+    "health": 5299,
+    "defense": 571,
+    "speed": 114
   },
   {
     "id": "c1040",
@@ -24747,7 +25367,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1040_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1040_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1040_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1040_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1040_l.png",
+    "attack": 1130,
+    "health": 4521,
+    "defense": 683,
+    "speed": 106
   },
   {
     "id": "c1038",
@@ -24903,7 +25527,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1038_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1038_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1038_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1038_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1038_l.png",
+    "attack": 1228,
+    "health": 6267,
+    "defense": 473,
+    "speed": 113
   },
   {
     "id": "c2003",
@@ -25061,7 +25689,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2003_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2003_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2003_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2003_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2003_l.png",
+    "attack": 890,
+    "health": 5784,
+    "defense": 610,
+    "speed": 107
   },
   {
     "id": "c2017",
@@ -25218,7 +25850,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2017_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2017_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2017_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2017_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2017_l.png",
+    "attack": 576,
+    "health": 5701,
+    "defense": 743,
+    "speed": 88
   },
   {
     "id": "c1072",
@@ -25377,7 +26013,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1072_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1072_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1072_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1072_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1072_l.png",
+    "attack": 1228,
+    "health": 5784,
+    "defense": 553,
+    "speed": 109
   },
   {
     "id": "c1004",
@@ -25541,7 +26181,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1004_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1004_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1004_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1004_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1004_l.png",
+    "attack": 1188,
+    "health": 4693,
+    "defense": 518,
+    "speed": 121
   },
   {
     "id": "c2048",
@@ -25699,7 +26343,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2048_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2048_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2048_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2048_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2048_l.png",
+    "attack": 1198,
+    "health": 4572,
+    "defense": 683,
+    "speed": 106
   },
   {
     "id": "c3063",
@@ -25862,7 +26510,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0008_w.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3063_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3063_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3063_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3063_l.png",
+    "attack": 857,
+    "health": 5057,
+    "defense": 543,
+    "speed": 110
   },
   {
     "id": "c1092",
@@ -26016,7 +26668,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1092_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1092_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1092_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1092_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1092_l.png",
+    "attack": 1178,
+    "health": 5340,
+    "defense": 553,
+    "speed": 119
   },
   {
     "id": "c2038",
@@ -26173,7 +26829,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2038_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2038_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2038_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2038_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2038_l.png",
+    "attack": 1228,
+    "health": 6267,
+    "defense": 473,
+    "speed": 113
   },
   {
     "id": "c2050",
@@ -26330,7 +26990,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2050_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2050_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2050_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2050_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2050_l.png",
+    "attack": 1198,
+    "health": 4572,
+    "defense": 683,
+    "speed": 106
   },
   {
     "id": "c1065",
@@ -26489,7 +27153,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1065_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1065_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1065_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1065_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1065_l.png",
+    "attack": 1010,
+    "health": 5097,
+    "defense": 497,
+    "speed": 117
   },
   {
     "id": "c3015",
@@ -26648,7 +27316,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0016_d.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3015_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3015_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3015_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3015_l.png",
+    "attack": 1040,
+    "health": 5518,
+    "defense": 452,
+    "speed": 108
   },
   {
     "id": "c1067",
@@ -26810,7 +27482,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1067_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1067_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1067_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1067_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1067_l.png",
+    "attack": 932,
+    "health": 4370,
+    "defense": 652,
+    "speed": 108
   },
   {
     "id": "c3032",
@@ -26973,7 +27649,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0006_i.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3032_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3032_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3032_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3032_l.png",
+    "attack": 951,
+    "health": 5518,
+    "defense": 583,
+    "speed": 104
   },
   {
     "id": "c3002",
@@ -27133,7 +27813,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0012_i.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3002_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3002_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3002_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3002_l.png",
+    "attack": 842,
+    "health": 6413,
+    "defense": 617,
+    "speed": 90
   },
   {
     "id": "c2065",
@@ -27294,7 +27978,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2065_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2065_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2065_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2065_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2065_l.png",
+    "attack": 1010,
+    "health": 5097,
+    "defense": 497,
+    "speed": 117
   },
   {
     "id": "c1050",
@@ -27455,7 +28143,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1050_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1050_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1050_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1050_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1050_l.png",
+    "attack": 1360,
+    "health": 4895,
+    "defense": 652,
+    "speed": 110
   },
   {
     "id": "c3021",
@@ -27613,7 +28305,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0014_f.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3021_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3021_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3021_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3021_l.png",
+    "attack": 839,
+    "health": 5518,
+    "defense": 592,
+    "speed": 100
   },
   {
     "id": "c2036",
@@ -27776,7 +28472,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2036_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2036_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2036_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2036_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2036_l.png",
+    "attack": 776,
+    "health": 5704,
+    "defense": 718,
+    "speed": 98
   },
   {
     "id": "c3091",
@@ -27939,7 +28639,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c3091_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3091_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3091_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3091_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3091_l.png",
+    "attack": 1081,
+    "health": 4572,
+    "defense": 494,
+    "speed": 111
   },
   {
     "id": "c1042",
@@ -28094,7 +28798,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1042_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1042_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1042_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1042_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1042_l.png",
+    "attack": 821,
+    "health": 6752,
+    "defense": 648,
+    "speed": 110
   },
   {
     "id": "c1007",
@@ -28248,7 +28956,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1007_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1007_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1007_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1007_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1007_l.png",
+    "attack": 1285,
+    "health": 5138,
+    "defense": 522,
+    "speed": 116
   },
   {
     "id": "c3065",
@@ -28407,7 +29119,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_m0036_d.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c3065_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c3065_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3065_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c3065_l.png",
+    "attack": 1005,
+    "health": 4693,
+    "defense": 532,
+    "speed": 109
   },
   {
     "id": "c2004",
@@ -28566,7 +29282,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2004_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2004_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2004_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2004_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2004_l.png",
+    "attack": 930,
+    "health": 5380,
+    "defense": 564,
+    "speed": 112
   },
   {
     "id": "c2020",
@@ -28726,7 +29446,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c2020_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c2020_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c2020_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2020_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c2020_l.png",
+    "attack": 971,
+    "health": 5623,
+    "defense": 557,
+    "speed": 106
   },
   {
     "id": "c1016",
@@ -28885,7 +29609,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1016_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1016_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1016_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1016_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1016_l.png",
+    "attack": 1228,
+    "health": 5784,
+    "defense": 553,
+    "speed": 109
   },
   {
     "id": "c1030",
@@ -29037,7 +29765,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1030_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1030_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1030_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1030_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1030_l.png",
+    "attack": 1158,
+    "health": 6003,
+    "defense": 553,
+    "speed": 112
   },
   {
     "id": "c1083",
@@ -29195,7 +29927,11 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1083_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1083_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1083_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1083_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1083_l.png",
+    "attack": 1039,
+    "health": 5299,
+    "defense": 673,
+    "speed": 115
   },
   {
     "id": "c1010",
@@ -29352,6 +30088,10 @@
     "Skill_3_icon": "https://assets.epicsevendb.com/_source/skill/sk_c1010_3.png",
     "Hero_icon": "https://assets.epicsevendb.com/_source/face/c1010_s.png",
     "Hero_image": "https://assets.epicsevendb.com/_source/face/c1010_su.png",
-    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1010_l.png"
+    "Hero_thumbnail": "https://assets.epicsevendb.com/_source/face/c1010_l.png",
+    "attack": 1160,
+    "health": 4733,
+    "defense": 627,
+    "speed": 104
   }
 ]
