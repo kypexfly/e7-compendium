@@ -450,7 +450,7 @@ import HEROES from '../assets/data/hero-data.json'
 document.title = "Game Data | E7Compendium"
 
 // # Tabs in profile
-const activeTab = ref('stats')
+const activeTab = ref('information')
 
 // Filtering heroes feature
 
