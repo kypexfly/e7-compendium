@@ -472,9 +472,7 @@
                     </Tab>
                     <Tab name="model-viewer" title="Model Viewer">
                         <p>
-                            See portrait artwork at <a
-                                :href="'https://www.e7vau.lt/portrait-viewer.html?id=' + heroData.id" target="_blank"
-                                rel="noopener noreferrer">e7vau.lt</a>
+                            No hero data available
                         </p>
 
                         <!-- <img class="max-w-full h-auto" :src="`https://assets.epicsevendb.com/herofull/${urlSlug(heroData.name)}.png`" alt=""> -->
