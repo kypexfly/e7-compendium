@@ -30,7 +30,7 @@
 					<li>
 						<router-link to="/mechanics"
 							class="block py-2 pr-4 pl-3 font-bold text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-2 md:px-3 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-							Mechanics
+							Testing
 						</router-link>
 					</li>
 					<li>

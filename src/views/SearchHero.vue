@@ -8,7 +8,7 @@
         }
     </component>
     <main class="flex justify-center overflow-hidden" @keyup.esc="removeSelectedHero" tabindex="0">
-        <!-- Left side panel  -->
+        <!-- first panel  -->
         <section class="w-full overflow-y-auto"
             :class="{ 'h-full hidden sm:block basis-2/3 xl:basis-auto border-r border-x-slate-700': selectedHero }">
 
@@ -175,19 +175,13 @@
                             <td class="px-1">
                                 <img :src="`/assets/symbol/icon_${hero.element}.png`"
                                     class="inline-block align-middle mr-1" width=20 height=20 alt="">
-                                <small class="hidden xs:inline-block"
-                                    :class="{ '!hidden md:!inline-block': selectedHero }">{{ hero.element }}</small>
                             </td>
                             <td class="px-1">
                                 <img :src="`/assets/symbol/icon_class_${hero.role}.png`"
                                     class="inline-block align-middle mr-1" width=20 height=20 alt="">
-                                <small class="hidden xs:inline-block"
-                                    :class="{ '!hidden md:!inline-block': selectedHero }">
-                                    {{ hero.role }}
-                                </small>
                             </td>
                             <td class="px-1">
-                                <img :src="`/assets/symbol/${hero.rarity}-star.png`" style="height:15px" alt="">
+                                <img :src="`/assets/symbol/${hero.rarity}-star.png`" class="h-[15px]" alt="">
                             </td>
                             <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
                                 <small>{{ hero.attack }}</small>
@@ -209,7 +203,7 @@
             </div>
         </section>
 
-        <!-- Right side panel  -->
+        <!-- Second panel  -->
         <section id="right-panel" v-if="heroData" class="w-full overflow-y-auto h-full fix-padding">
             <div class="w-full xl:w-[650px] mr-auto relative">
                 <button @click="removeSelectedHero" type="button"
@@ -317,7 +311,7 @@
 
                         <div class="flex justify-between gap-10">
                             <div class="flex-1">
-                                <h3 class="text-xl mt-4">Imprint Release</h3>
+                                <h3 class="font-light mt-4">Imprint Release</h3>
 
                                 <ul class="space-y-1 list-disc list-inside mt-4">
                                     <li v-for="level in ['d', 'c', 'b', 'a', 's', 'ss', 'sss']" :key="level"
@@ -327,13 +321,14 @@
                                                 class="w-[20px] inline-block align-middle" alt="" />
                                             {{ heroData.self_imprint_stat }}
                                         </span>
-                                        <span>{{ heroData['self_imprint_' + level.toUpperCase()] }}</span>
+                                        <span>{{ checkTypeImprint(heroData['self_imprint_' + level.toUpperCase()])
+                                        }}</span>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="flex-1">
-                                <h3 class="text-xl mt-4">Imprint Concentration</h3>
+                                <h3 class="font-light mt-4">Imprint Concentration</h3>
 
                                 <ul class="space-y-1 list-disc list-inside mt-4">
                                     <li v-for="level in ['d', 'c', 'b', 'a', 's', 'ss', 'sss']" :key="level"
@@ -343,7 +338,8 @@
                                                 class="w-[20px] inline-block align-middle" alt="" />
                                             {{ heroData.release_imprint_stat }}
                                         </span>
-                                        <span>{{ heroData['release_imprint_' + level.toUpperCase()] }}</span>
+                                        <span>{{ checkTypeImprint(heroData['release_imprint_' + level.toUpperCase()])
+                                        }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -380,7 +376,7 @@
                     </Tab>
                     <Tab name="skills" title="Skills">
                         <div class="flex flex-col gap-3">
-                            <div class="flex gap-5 w-full py-4 px-2 items-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+                            <div class="flex gap-5 w-full py-4 px-2 items-center cursor-pointer bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
                                 v-for="skill in [1, 2, 3]" :key="skill">
                                 <img :src="heroData[`Skill_${skill}_icon`]" class="w-[82px] h-[84px]" alt="">
                                 <div>
@@ -395,14 +391,66 @@
                                         {{ heroData[`Skill_${skill}_cooldown`] }} turn cooldown
                                     </span>
 
-                                    <p class="my-1 text-sm ">{{ heroData[`Skill_${skill}_description`] }}</p>
+                                    <p class="mt-3 text-sm ">{{ heroData[`Skill_${skill}_description`] }}</p>
 
                                 </div>
                             </div>
                         </div>
                     </Tab>
                     <Tab name="stats" title="Stats">
-                        <h2 class="text-m uppercase font-bold">Lv. 60 + 6 ⭐ stats</h2>
+                        <h2 class="text-m uppercase font-bold">LEVEL {{ heroLevel }} - Awakened {{ heroAwaken }}⭐</h2>
+
+                        <p>
+                            <slider v-model="heroLevel" tooltip tooltipText="Level %v" tooltipColor="#374151"
+                                tooltipTextColor="white" alwaysShowHandle color="rgb(28, 100, 242)" :min=1 :max=60
+                                :height=10 track-color="#374151" />
+                        </p>
+
+                        <div class="flex items-center justify-between my-4 flex-auto flex-wrap">
+                            <label
+                                class="flex-1  text-center ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer">
+                                <input type="radio" value="1" name="inline-radio-group" v-model="heroAwaken"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                1 <img :src="`/assets/symbol/1-star-awaken.png`"
+                                    class="inline-block align-middle w-[20px] h-[20px]" alt="" />
+                            </label>
+                            <label
+                                class="flex-1  text-center ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer">
+                                <input type="radio" value="2" name="inline-radio-group" v-model="heroAwaken"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                2 <img :src="`/assets/symbol/1-star-awaken.png`"
+                                    class="inline-block align-middle w-[20px] h-[20px]" alt="" />
+                            </label>
+                            <label
+                                class="flex-1  text-center ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer">
+                                <input type="radio" value="3" name="inline-radio-group" v-model="heroAwaken"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                3 <img :src="`/assets/symbol/1-star-awaken.png`"
+                                    class="inline-block align-middle w-[20px] h-[20px]" alt="" />
+                            </label>
+                            <label
+                                class="flex-1  text-center ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer">
+                                <input type="radio" value="4" name="inline-radio-group" v-model="heroAwaken"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                4 <img :src="`/assets/symbol/1-star-awaken.png`"
+                                    class="inline-block align-middle w-[20px] h-[20px]" alt="" />
+                            </label>
+                            <label
+                                class="flex-1  text-center ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer">
+                                <input type="radio" value="5" name="inline-radio-group" v-model="heroAwaken"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                5 <img :src="`/assets/symbol/1-star-awaken.png`"
+                                    class="inline-block align-middle w-[20px] h-[20px]" alt="" />
+                            </label>
+                            <label
+                                class="flex-1  text-center ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer">
+                                <input type="radio" value="6" name="inline-radio-group" v-model="heroAwaken" checked
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                6 <img :src="`/assets/symbol/1-star-awaken.png`"
+                                    class="inline-block align-middle w-[20px] h-[20px]" alt="" />
+                            </label>
+                        </div>
+
                         <ProgressBar label="Attack" :labelValue="heroStats.attack"
                             :progress="Math.floor((heroStats.attack / 1435) * 50)" />
                         <ProgressBar label="Health" :labelValue="heroStats.health"
@@ -423,8 +471,13 @@
                             :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
                     </Tab>
                     <Tab name="model-viewer" title="Model Viewer">
-                        See model at <a :href="'https://www.e7vau.lt/portrait-viewer.html?id=' + heroData.id"
-                            target="_blank" rel="noopener noreferrer">e7vau.lt</a>
+                        <p>
+                            See portrait artwork at <a
+                                :href="'https://www.e7vau.lt/portrait-viewer.html?id=' + heroData.id" target="_blank"
+                                rel="noopener noreferrer">e7vau.lt</a>
+                        </p>
+
+                        <!-- <img class="max-w-full h-auto" :src="`https://assets.epicsevendb.com/herofull/${urlSlug(heroData.name)}.png`" alt=""> -->
                     </Tab>
                     <Tab name="guides" title="Guides">
                         No hero data available
@@ -440,11 +493,13 @@
 
 <script setup>
 import _ from 'lodash'
+import urlSlug from 'url-slug'
 import SearchBar from '../components/SearchBar.vue';
 import { ref, computed } from 'vue';
 import { Tabs, Tab, Button, Avatar } from 'flowbite-vue'
 import ProgressBar from '../components/ProgressBar.vue';
 import heroStatService from '../services/hero-stat.service'
+import slider from "vue3-slider"
 import HEROES from '../assets/data/hero-data.json'
 
 document.title = "Game Data | E7Compendium"
@@ -509,25 +564,28 @@ const sortTableBy = (property) => {
     // console.log('sortByName:', heroes.value)
 }
 
-// Hero profile feature (right side)
+// Hero profile feature (second panel)
 const heroData = computed(() => heroes.value.filter((hero) => {
     return hero.id === selectedHero.value
 })[0])
 
 const searchHistory = ref(new Set(JSON.parse(window.localStorage.getItem('searchHistory'))))
 
+const heroLevel = ref(60)
+const heroAwaken = ref(6)
+
 const heroStats = computed(() => {
     console.log("trigger: heroStats " + heroData.value.name)
     return {
-        attack: heroStatService.getAttack(heroData.value, 60, 6),
-        health: heroStatService.getHealth(heroData.value, 60, 6),
-        defense: heroStatService.getDefense(heroData.value, 60, 6),
-        speed: heroStatService.getSpeed(heroData.value, 60, 6),
-        critChance: heroStatService.getCritChance(heroData.value, 60, 6),
-        critDamage: heroStatService.getCritDamage(heroData.value, 60, 6),
-        effectiveness: heroStatService.getEffectiveness(heroData.value, 60, 6),
-        resistance: heroStatService.getResistance(heroData.value, 60, 6),
-        dualAttack: heroStatService.getDualAttack(heroData.value, 60, 6)
+        attack: heroStatService.getAttack(heroData.value, heroLevel.value, heroAwaken.value),
+        health: heroStatService.getHealth(heroData.value, heroLevel.value, heroAwaken.value),
+        defense: heroStatService.getDefense(heroData.value, heroLevel.value, heroAwaken.value),
+        speed: heroStatService.getSpeed(heroData.value, heroLevel.value, heroAwaken.value),
+        critChance: heroStatService.getCritChance(heroData.value, heroAwaken.value),
+        critDamage: heroStatService.getCritDamage(heroData.value, heroAwaken.value),
+        effectiveness: heroStatService.getEffectiveness(heroData.value, heroAwaken.value),
+        resistance: heroStatService.getResistance(heroData.value, heroAwaken.value),
+        dualAttack: heroStatService.getDualAttack()
     }
 })
 
@@ -555,6 +613,13 @@ const removeSearchHistory = () => {
     searchHistory.value.clear()
     window.localStorage.setItem('searchHistory', JSON.stringify([]))
     console.log("SearchHistory removed")
+}
+
+const checkTypeImprint = (value) => {
+    if (value === undefined) return '-'
+    if (value < 1) return `${(Number(value) * 100).toFixed(1)}%`
+    return value
+
 }
 
 </script>

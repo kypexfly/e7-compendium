@@ -9,11 +9,11 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    // {
-    //   path: '/mechanics',
-    //   name: 'mechanics',
-    //   component: () => import('../views/Mechanics.vue')
-    // },
+    {
+      path: '/mechanics',
+      name: 'mechanics',
+      component: () => import('../views/Mechanics.vue')
+    },
     {
       path: '/search',
       name: 'search',
