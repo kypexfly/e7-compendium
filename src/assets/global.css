@@ -15,7 +15,7 @@ body, #app {
 #app {
     background-image: url('./upper-gradient.svg');
     background-repeat: no-repeat;
-    background-size: 55%;
+    background-size: 75%;
 }
 
 main {

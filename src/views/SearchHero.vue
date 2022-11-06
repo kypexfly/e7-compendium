@@ -319,7 +319,7 @@
                                         <span>
                                             <img :src="`https://assets.epicsevendb.com/_source/img/hero_dedi_a_${level}.png`"
                                                 class="w-[20px] inline-block align-middle" alt="" />
-                                            {{ heroData.self_imprint_stat }}
+                                            {{ statNames[heroData.self_imprint_stat] }}
                                         </span>
                                         <span>{{ checkTypeImprint(heroData['self_imprint_' + level.toUpperCase()])
                                         }}</span>
@@ -336,7 +336,7 @@
                                         <span>
                                             <img :src="`https://assets.epicsevendb.com/_source/img/hero_dedi_a_${level}.png`"
                                                 class="w-[20px] inline-block align-middle" alt="" />
-                                            {{ heroData.release_imprint_stat }}
+                                            {{ statNames[heroData.release_imprint_stat] }}
                                         </span>
                                         <span>{{ checkTypeImprint(heroData['release_imprint_' + level.toUpperCase()])
                                         }}</span>
@@ -527,6 +527,20 @@ const morales = ['Criticism', 'Reality Check', 'Heroic Tale', 'Comforting Cheer'
     'Happy Memory', 'Unique Comment', 'Self-Indulgent', 'Occult', 'Myth', 'Bizarre Story', 'Food Story', 'Horror Story', 'Gossip', 'Dream',
     'Advice', 'Complain', 'Belief', 'Interesting Story']
 
+const statNames = {
+    max_hp_rate: "Health",
+    def_rate: "Defense",
+    acc: "Effectiveness",
+    max_hp: "Health",
+    def: "Defense",
+    att: "Attack",
+    res: "Effect Resistance",
+    att_rate: "Attack",
+    speed: "Speed",
+    cri: "Crit Chance",
+    coop: "Dual Attack"
+}
+
 const searchTerm = ref('')
 const selectedHero = ref('')
 
@@ -591,6 +605,8 @@ const heroStats = computed(() => {
 
 const showMore = (heroId) => {
     if (heroId === selectedHero.value) return selectedHero.value = ""
+
+    selectedHero.value = ""
     selectedHero.value = heroId
 
     if (searchHistory.value.size < 16) {
