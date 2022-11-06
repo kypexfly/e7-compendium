@@ -471,11 +471,7 @@
                             :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
                     </Tab>
                     <Tab name="model-viewer" title="Model Viewer">
-                        <p>
-                            No hero data available
-                        </p>
-
-                        <!-- <img class="max-w-full h-auto" :src="`https://assets.epicsevendb.com/herofull/${urlSlug(heroData.name)}.png`" alt=""> -->
+                        No hero data available
                     </Tab>
                     <Tab name="guides" title="Guides">
                         No hero data available
