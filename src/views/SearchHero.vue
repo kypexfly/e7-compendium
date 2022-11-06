@@ -471,7 +471,7 @@
                             :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
                     </Tab>
                     <Tab name="model-viewer" title="Model Viewer">
-                        No hero data available
+                            No hero data available
                     </Tab>
                     <Tab name="guides" title="Guides">
                         No hero data available
