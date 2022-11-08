@@ -10,10 +10,10 @@
     <main class="flex justify-center overflow-hidden" @keyup.esc="removeSelectedHero" tabindex="0">
         <!-- first panel  -->
         <section class="overflow-y-auto flex-1">
-            <!-- <div class="sticky top-0 z-10 my-4 ml-auto mr-auto max-w-[640px]"
-                :class="{ '!mr-0': selectedHero }">
+            <div class="sticky top-0 z-10 my-4 ml-auto mr-auto max-w-[640px]"
+                :class="{ '': selectedHero }">
                 <SearchBar v-model="searchTerm" />
-            </div> -->
+            </div>
             
             <div class="relative mx-auto max-w-[640px] overflow-y-auto"
                 :class="{ '': selectedHero }">
