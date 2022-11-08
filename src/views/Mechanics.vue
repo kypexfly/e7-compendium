@@ -2,9 +2,9 @@
     <component :is="'style'" type="text/css">
         footer {display: none}
     </component>
-    <main class="flex justify-center overflow-hidden" ref="mainContainer" style="">
+    <main class="flex justify-center overflow-hidden" ref="mainContainer" @keyup.esc="removeSelectedHero" tabindex="0">
         <section class="overflow-y-auto border-r border-slate-700 flex-1">
-            <article class="mx-auto max-w-[640px] :height overflow-y-auto" :class="{ '!ml-auto !mx-0': selectedHero }">
+            <article class="relative left-1/2 -translate-x-1/2 max-w-[640px] overflow-y-auto transition-all ease-in-out duration-300" :class="{ '!left-full !-translate-x-full': selectedHero }">
                 <ul>
                     <li class="text-xl font-bold p-3 bg-slate-800 uppercase">Select a hero</li>
                     <li v-for="heroNumber in _.range(1, 51)" :key="heroNumber" @click="showHeroPanel(heroNumber)"
@@ -16,10 +16,14 @@
             </article>
         </section>
 
-        <section class="overflow-y-auto flex-1" :class="{ 'max-w-[640px]': selectedHero && selectedExtra }"
-            v-if="selectedHero">
-            <article class="max-w-[640px] :height overflow-y-auto"
-                :class="{ 'mr-auto': selectedHero, 'ml-auto': selectedExtra }">
+        <section class="overflow-y-auto flex-0 basis-0 invisible transition-all ease-out duration-500 translate-x-[100%]" :class="{
+            '!visible !flex-1 !basis-1 translate-x-[0%]': selectedHero,
+            'max-w-[640px]': selectedHero && selectedExtra
+        }">
+            <article class="max-w-[640px] overflow-y-auto mr-auto" :class="{
+                '': selectedHero,
+                'ml-auto': selectedExtra
+            }">
                 <ul class="text-center">
                     <li class="text-xl font-bold p-3 bg-slate-800 uppercase">SELECTED: Hero {{ selectedHero }}</li>
                     <li v-for="extraNumber in _.range(1, 51)" :key="extraNumber" @click="showExtraPanel(extraNumber)"
@@ -31,7 +35,7 @@
         </section>
 
         <section class="overflow-y-auto border-l border-slate-700 flex-1" v-if="selectedExtra">
-            <article class="mr-auto max-w-[640px] :height overflow-y-auto">
+            <article class="mr-auto max-w-[640px] overflow-y-auto">
                 <ul>
                     <li class="text-xl font-bold p-3 bg-slate-800 uppercase">Extra {{ selectedExtra }}</li>
                     <li class="p-3" v-for="repeat in _.range(1, 21)" :key="repeat">
@@ -68,6 +72,10 @@ const showExtraPanel = (extraName) => {
         return
     }
     selectedExtra.value = extraName
+}
+
+const removeSelectedHero = () => {
+    selectedHero.value = ''
 }
 
 const mainContainer = ref(null)
