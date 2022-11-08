@@ -9,203 +9,215 @@
     </component>
     <main class="flex justify-center overflow-hidden" @keyup.esc="removeSelectedHero" tabindex="0">
         <!-- first panel  -->
-        <section class="w-full overflow-y-auto"
-            :class="{ 'h-full hidden sm:block basis-2/3 xl:basis-auto border-r border-x-slate-700': selectedHero }">
-
-            <div class="w-full lg:w-[650px] sticky top-0 z-10 container my-4 mx-auto"
-                :class="{ 'ml-auto mr-0': selectedHero }">
+        <section class="overflow-y-auto flex-1">
+            <!-- <div class="sticky top-0 z-10 my-4 ml-auto mr-auto max-w-[640px]"
+                :class="{ '!mr-0': selectedHero }">
                 <SearchBar v-model="searchTerm" />
-            </div>
+            </div> -->
+            
+            <div class="relative mx-auto max-w-[640px] overflow-y-auto"
+                :class="{ '': selectedHero }">
 
-            <!-- Filter options -->
-            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-4 text-slate-400 text-sm"
-                :class="{ 'ml-auto mr-0': selectedHero }">
+                <!-- Filter options -->
+                <div class="sm:rounded-sm mb-4 text-slate-400 text-sm">
 
-                <!-- Search history -->
-                <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">
-                    Search history (max 16)
-                    <button @click="removeSearchHistory"
-                        class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                        clean history
-                    </button>
-                </p>
-                <!-- <StackedAvatars> -->
-                <div class="flex flex-wrap">
-                    <Avatar v-if="!searchHistory.size" rounded />
-                    <Avatar v-else v-for="heroId in searchHistory" :key="heroId" class="cursor-pointer"
-                        @click="showMore(heroId)"
-                        :img="'https://assets.epicsevendb.com/_source/face/' + heroId + '_s.png'" rounded />
-                </div>
-                <!-- </StackedAvatars> -->
+                    <!-- Search history -->
+                    <!-- <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">
+                        Search history (max 16)
+                        <button @click="removeSearchHistory"
+                            class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
+                            clean history
+                        </button>
+                    </p>
 
-                <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">Filter by
-                    <button @click="resetSelectedFilter"
-                        class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                        remove all filters
-                    </button>
-                </p>
+                    <div class="flex flex-wrap">
+                        <Avatar v-if="!searchHistory.size" rounded />
+                        <Avatar v-else v-for="heroId in searchHistory" :key="heroId" class="cursor-pointer"
+                            @click="showMore(heroId)"
+                            :img="'https://assets.epicsevendb.com/_source/face/' + heroId + '_s.png'" rounded />
+                    </div> -->
 
-                <!-- For testing purposes -->
-                <!-- <div class="flex justify-between my-4">
+                    <p class="mb-2 border-slate-700 flex justify-between gap-4 items-center">Filter by
+                        <button @click="resetSelectedFilter"
+                            class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
+                            remove all filters
+                        </button>
+                    </p>
+
+                    <!-- For testing purposes -->
+                    <!-- <div class="flex justify-between my-4">
                     <span>Roles: {{ selectedFilter.roles }}</span>
                     <span>Elements: {{ selectedFilter.elements }}</span>
                     <span>Rarities: {{ selectedFilter.rarities }}</span>
                 </div> -->
 
-                <!-- Filter by role -->
-                <div class="flex flex-wrap justify-between gap-2">
-                    <ul class="flex gap-1">
-                        <li v-for="role in filterOptions.roles" :key="role">
-                            <input type="checkbox" :id="role + '-option'" :value="role" class="hidden peer"
-                                v-model="selectedFilter.roles">
-                            <label :for="role + '-option'"
-                                class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                <img :src="`/assets/symbol/icon_class_${role}.png`"
-                                    class="inline-block align-middle w-5 h-5" alt="">
-                            </label>
-                        </li>
-                        <li>
-                            <button @click="selectedFilter.roles.length = 0"
-                                class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
-                                <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
+                    <!-- Filter by role -->
+                    <div class="flex flex-wrap justify-between gap-2">
+                        <ul class="flex gap-1">
+                            <li v-for="role in filterOptions.roles" :key="role">
+                                <input type="checkbox" :id="role + '-option'" :value="role" class="hidden peer"
+                                    v-model="selectedFilter.roles">
+                                <label :for="role + '-option'"
+                                    class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <img :src="`/assets/symbol/icon_class_${role}.png`"
+                                        class="inline-block align-middle w-5 h-5" alt="">
+                                </label>
+                            </li>
+                            <li>
+                                <button @click="selectedFilter.roles.length = 0"
+                                    class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
+                                    <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
 
-                    <!-- Filter by element -->
-                    <ul class="flex gap-1">
-                        <li v-for="element in filterOptions.elements" :key="element">
-                            <input type="checkbox" :id="element + '-option'" :value="element" class="hidden peer"
-                                v-model="selectedFilter.elements">
-                            <label :for="element + '-option'"
-                                class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                <img :src="`/assets/symbol/icon_${element}.png`"
-                                    class="inline-block align-middle w-5 h-5" alt="">
-                            </label>
-                        </li>
-                        <li>
-                            <button @click="selectedFilter.elements.length = 0"
-                                class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
-                                <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
+                        <!-- Filter by element -->
+                        <ul class="flex gap-1">
+                            <li v-for="element in filterOptions.elements" :key="element">
+                                <input type="checkbox" :id="element + '-option'" :value="element" class="hidden peer"
+                                    v-model="selectedFilter.elements">
+                                <label :for="element + '-option'"
+                                    class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <img :src="`/assets/symbol/icon_${element}.png`"
+                                        class="inline-block align-middle w-5 h-5" alt="">
+                                </label>
+                            </li>
+                            <li>
+                                <button @click="selectedFilter.elements.length = 0"
+                                    class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
+                                    <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
 
-                    <!-- Filter by rarity -->
-                    <ul class="flex gap-1">
-                        <li v-for="rarity in filterOptions.rarities" :key="rarity">
-                            <input type="checkbox" :id="rarity + '-option'" :value="rarity" class="hidden peer"
-                                v-model="selectedFilter.rarities">
-                            <label :for="rarity + '-option'"
-                                class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                <span class="text-xs text-center mr-1">{{ rarity }}</span>
-                                <img src="/assets/symbol/1-star.png" class="inline-block align-middle w-4 h-4" alt="">
-                            </label>
-                        </li>
-                        <li>
-                            <button @click="selectedFilter.rarities.length = 0"
-                                class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
-                                <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
+                        <!-- Filter by rarity -->
+                        <ul class="flex gap-1">
+                            <li v-for="rarity in filterOptions.rarities" :key="rarity">
+                                <input type="checkbox" :id="rarity + '-option'" :value="rarity" class="hidden peer"
+                                    v-model="selectedFilter.rarities">
+                                <label :for="rarity + '-option'"
+                                    class="inline-flex justify-center items-center p-1 w-10 h-8 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <span class="text-xs text-center mr-1">{{ rarity }}</span>
+                                    <img src="/assets/symbol/1-star.png" class="inline-block align-middle w-4 h-4"
+                                        alt="">
+                                </label>
+                            </li>
+                            <li>
+                                <button @click="selectedFilter.rarities.length = 0"
+                                    class="inline-flex justify-center items-center p-1 w-8 h-8 cursor-pointer">
+                                    <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Table with heroes data -->
-            <div class="container lg:w-[650px] overflow-x-auto relative sm:rounded-sm mx-auto mb-10"
-                :class="{ 'ml-auto mr-0': selectedHero }">
-                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mx-auto">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-blue-600 dark:text-gray-200">
-                        <tr>
-                            <th scope="col" class="p-2.5 hidden sm:table-cell cursor-pointer" @click="sortTableBy('id')"
-                                :class="{ '!hidden md:!table-cell': selectedHero }">ID</th>
-                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('name')">Name</th>
-                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('element')">Element</th>
-                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('role')">Class</th>
-                            <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('rarity')">Grade</th>
-                            <th scope="col" class="p-2.5 hidden sm:table-cell"
-                                :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                ATK
-                            </th>
-                            <th scope="col" class="p-2.5 hidden sm:table-cell"
-                                :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                HP
-                            </th>
-                            <th scope="col" class="p-2.5 hidden sm:table-cell"
-                                :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                DEF
-                            </th>
-                            <th scope="col" class="p-2.5 hidden sm:table-cell"
-                                :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                SPD
-                            </th>
-                        </tr>
-                    </thead>
+                <!-- Table with heroes data -->
+                <div class="overflow-x-auto relative sm:rounded-sm mb-10"
+                    :class="{ 'ml-auto mr-0': selectedHero }">
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mx-auto">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-blue-600 dark:text-gray-200">
+                            <tr>
+                                <th scope="col" class="p-2.5 hidden sm:table-cell cursor-pointer"
+                                    @click="sortTableBy('id')" :class="{ '!hidden md:!table-cell': selectedHero }">ID
+                                </th>
+                                <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('name')">Name</th>
+                                <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('element')">Element
+                                </th>
+                                <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('role')">Class</th>
+                                <th scope="col" class="p-2.5 cursor-pointer" @click="sortTableBy('rarity')">Grade</th>
+                                <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                    :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                    ATK
+                                </th>
+                                <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                    :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                    HP
+                                </th>
+                                <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                    :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                    DEF
+                                </th>
+                                <th scope="col" class="p-2.5 hidden sm:table-cell"
+                                    :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                    SPD
+                                </th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr v-for="hero in filteredHeroes" :key="hero.id" @click="showMore(hero.id)"
-                            class="border-b dark:hover:bg-gray-600/50 dark:border-gray-700 cursor-pointer"
-                            :class="{ 'bg-gray-600/50': (selectedHero === hero.id) }"
-                            :data-modal-toggle="'popup-' + hero.id">
-                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden md:!table-cell': selectedHero }">
-                                <small>
-                                    <pre>{{ hero.id }}</pre>
-                                </small>
-                            </td>
-                            <th scope="row" class="px-1 font-medium text-gray-900 whitespace-nowrap dark:text-gray-100">
-                                <img :src="hero.Hero_icon" loading="lazy" width=40 height=40 alt=""
-                                    class="inline-block align-middle mr-1" /> {{ hero.name }}
-                            </th>
-                            <td class="px-1">
-                                <img :src="`/assets/symbol/icon_${hero.element}.png`"
-                                    class="inline-block align-middle mr-1" width=20 height=20 alt="">
-                            </td>
-                            <td class="px-1">
-                                <img :src="`/assets/symbol/icon_class_${hero.role}.png`"
-                                    class="inline-block align-middle mr-1" width=20 height=20 alt="">
-                            </td>
-                            <td class="px-1">
-                                <img :src="`/assets/symbol/${hero.rarity}-star.png`" class="h-[15px]" alt="">
-                            </td>
-                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                <small>{{ hero.attack }}</small>
-                            </td>
-                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                <small>{{ hero.health }}</small>
-                            </td>
-                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                <small>{{ hero.defense }}</small>
-                            </td>
-                            <td class="px-1 hidden sm:table-cell" :class="{ '!hidden lg:!table-cell': selectedHero }">
-                                <small>{{ hero.speed }}</small>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p v-if="!filteredHeroes.length" class="text-sm text-center text-gray-500 dark:text-gray-400">
-                    No results for "{{ searchTerm }}"</p>
+                        <tbody>
+                            <tr v-for="hero in filteredHeroes" :key="hero.id" @click="showMore(hero.id)"
+                                class="border-b dark:hover:bg-gray-600/50 dark:border-gray-700 cursor-pointer"
+                                :class="{ 'bg-gray-600/50': (selectedHero === hero.id) }"
+                                :data-modal-toggle="'popup-' + hero.id">
+                                <td class="px-1 hidden sm:table-cell"
+                                    :class="{ '!hidden md:!table-cell': selectedHero }">
+                                    <small>
+                                        <pre>{{ hero.id }}</pre>
+                                    </small>
+                                </td>
+                                <th scope="row"
+                                    class="px-1 font-medium text-gray-900 whitespace-nowrap dark:text-gray-100">
+                                    <img :src="hero.Hero_icon" loading="lazy" width=40 height=40 alt=""
+                                        class="inline-block align-middle mr-1" /> {{ hero.name }}
+                                </th>
+                                <td class="px-1">
+                                    <img :src="`/assets/symbol/icon_${hero.element}.png`"
+                                        class="inline-block align-middle mr-1" width=20 height=20 alt="">
+                                </td>
+                                <td class="px-1">
+                                    <img :src="`/assets/symbol/icon_class_${hero.role}.png`"
+                                        class="inline-block align-middle mr-1" width=20 height=20 alt="">
+                                </td>
+                                <td class="px-1">
+                                    <img :src="`/assets/symbol/${hero.rarity}-star.png`" class="h-[15px]" alt="">
+                                </td>
+                                <td class="px-1 hidden sm:table-cell"
+                                    :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                    <small>{{ hero.attack }}</small>
+                                </td>
+                                <td class="px-1 hidden sm:table-cell"
+                                    :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                    <small>{{ hero.health }}</small>
+                                </td>
+                                <td class="px-1 hidden sm:table-cell"
+                                    :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                    <small>{{ hero.defense }}</small>
+                                </td>
+                                <td class="px-1 hidden sm:table-cell"
+                                    :class="{ '!hidden lg:!table-cell': selectedHero }">
+                                    <small>{{ hero.speed }}</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p v-if="!filteredHeroes.length" class="text-sm text-center text-gray-500 dark:text-gray-400">
+                        No results for "{{ searchTerm }}"</p>
+                </div>
             </div>
         </section>
 
         <!-- Second panel  -->
-        <section id="right-panel" v-if="heroData" class="w-full overflow-y-auto h-full fix-padding">
-            <div class="w-full xl:w-[650px] mr-auto relative">
+        <section
+            class="overflow-y-auto flex-1 mr-[-150vw] invisible transition-all duration-300 border-l border-slate-700"
+            :class="{ '!visible !mr-[0vw]': selectedHero }">
+
+            <div class="max-w-[640px] overflow-y-auto mx-auto"  v-if="selectedHero">
                 <button @click="removeSelectedHero" type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm mb-2 p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-toggle="defaultModal">
@@ -260,6 +272,11 @@
                 <Tabs variant="underline" v-model="activeTab" class="p-5">
                     <!-- class appends to content DIV for all tabs -->
                     <Tab name="information" title="Information">
+                        <button @click="showExtraPanel('Open third column')"
+                        class="p-2 bg-slate-700 m-5">
+                            Open third column (Testing...)
+                        </button>
+
                         <h2 class="text-m uppercase font-bold">{{ heroData.name }}'s story</h2>
                         <p>
                             {{ heroData.story }}
@@ -471,7 +488,7 @@
                             :progress="Math.floor((heroStats.dualattackchance / 100) * 25)" />
                     </Tab>
                     <Tab name="model-viewer" title="Model Viewer">
-                            No hero data available
+                        No hero data available
                     </Tab>
                     <Tab name="guides" title="Guides">
                         No hero data available
@@ -479,6 +496,21 @@
                 </Tabs>
 
             </div>
+        </section>
+
+        <!-- Third panel  -->
+        <section class="overflow-y-auto flex-1 mr-[-50vw] invisible transition-all duration-300 border-l border-slate-700"
+        :class="{'!visible !mr-[0vw]': selectedExtra}">
+            <article class="mx-auto max-w-[640px] overflow-y-auto" v-if="selectedExtra">
+                <ul>
+                    <li class="text-xl font-bold p-3 bg-slate-800 uppercase">Extra {{ selectedExtra }}</li>
+                    <li class="p-3" v-for="repeat in _.range(1, 21)" :key="repeat">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deserunt, similique repellat
+                        voluptatum dolore fugit esse dolores totam aut repudiandae porro voluptas sint veniam
+                        distinctio, pariatur officiis quo libero est! {{ repeat * selectedExtra }}
+                    </li>
+                </ul>
+            </article>
         </section>
 
     </main>
@@ -537,6 +569,7 @@ const statNames = {
 
 const searchTerm = ref('')
 const selectedHero = ref('')
+const selectedExtra = ref('')
 
 const checkMultipleFilterValues = (value, filterArray) => {
     if (!filterArray.length) return true
@@ -598,9 +631,14 @@ const heroStats = computed(() => {
 })
 
 const showMore = (heroId) => {
-    if (heroId === selectedHero.value) return selectedHero.value = ""
+    if (heroId === selectedHero.value) {
+        selectedExtra.value = ""
+        selectedHero.value = ""
+        return
+    }
 
     selectedHero.value = ""
+    selectedExtra.value = ''
     selectedHero.value = heroId
 
     if (searchHistory.value.size < 16) {
@@ -615,8 +653,18 @@ const showMore = (heroId) => {
 
     console.log(`trigger: showMore(${heroId})`)
 }
+
+const showExtraPanel = (extraName) => {
+    console.log(`shoExtraPanel(${extraName})`)
+    if (selectedExtra.value === extraName) {
+        selectedExtra.value = ''
+        return
+    }
+    selectedExtra.value = extraName
+}
 const removeSelectedHero = () => {
     selectedHero.value = ''
+    selectedExtra.value= ''
     console.log("selectedHero removed")
 }
 const removeSearchHistory = () => {
@@ -637,9 +685,5 @@ const checkTypeImprint = (value) => {
 <style>
 main {
     height: calc(100vh - 77px);
-}
-
-#right-panel * {
-    transition: 0.2s ease !important;
 }
 </style>
